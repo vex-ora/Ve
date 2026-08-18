@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VEXORA — Digital Atelier</title>
 <meta name="description" content="VEXORA — An independent digital atelier crafting websites, apps and systems.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%230a0a0a'/%3E%3Ctext%20x='32'%20y='46'%20font-family='serif'%20font-size='44'%20font-weight='900'%20text-anchor='middle'%20fill='%23f5f1ea'%3EV%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="https://vex-ora.github.io/Ve/assets/vexora-logo.jpg">
+<link rel="icon" type="image/jpeg" href="assets/vexora-logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -183,12 +184,17 @@ footer{background:var(--ink);color:var(--paper);padding:5rem 0 2rem}
     .work-cta p{color:var(--mute);font-size:.9rem}
     @media(max-width:760px){.work-list{grid-template-columns:1fr}.pj-preview{height:165px}.work-cta{align-items:flex-start;flex-direction:column}}
     
+
+    /* brand logo */
+    .logo img{width:36px;height:36px;display:block;object-fit:cover;object-position:50% 28%;border-radius:50%;border:1px solid rgba(35,200,255,.7);box-shadow:0 0 18px rgba(35,120,255,.28)}
+    .logo .dot{display:none}
+    
 </style>
 </head>
 <body>
 
 <nav><div class="nav-in">
- <a class="logo" href="#"><span class="dot"></span><span>Vexora</span></a>
+ <a class="logo" href="#"><img src="assets/vexora-logo.jpg" alt="Vexora"><span>Vexora</span></a>
  <div class="nav-mid"><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div>
  <div class="nav-r"><span class="time" id="clock"></span><button class="lang" id="langBtn" onclick="setLang(cur==='ar'?'en':'ar')">EN</button><a class="btn fill" style="padding:.5rem 1.1rem;font-size:.75rem" href="#contact" data-t="n6"></a>
  <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
