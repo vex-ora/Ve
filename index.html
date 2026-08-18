@@ -145,6 +145,44 @@ footer{background:var(--ink);color:var(--paper);padding:5rem 0 2rem}
 .wa-float:hover{transform:scale(1.06);background:var(--ink)}
 @media(max-width:1024px){.nav-mid{display:none}.burger{display:block}.proc{grid-template-columns:1fr 1fr}.proc-step:nth-child(odd){border-inline-start:none}.proj-row,.work-head{grid-template-columns:40px 1fr auto;gap:1rem}.pj-desc,.pj-cat,.work-head span:nth-child(3),.work-head span:nth-child(4){display:none}.g-wrap,.contact{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.proc,.hero-grid,.f-grid{grid-template-columns:1fr}.proc-step{border-inline-start:none!important;border-top:1px solid var(--line)}.wrap{padding:0 1.25rem}.nav-in{padding:1rem 1.25rem}}
+
+    /* premium demo cards */
+    .work-head{display:none!important}
+    .work-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;background:transparent;border:0}
+    .proj-row{display:flex;flex-direction:column;align-items:stretch;gap:0;min-height:100%;padding:0;border:1px solid var(--line);background:var(--paper);position:relative;overflow:hidden;transition:transform .35s ease,background .35s ease,box-shadow .35s ease}
+    .proj-row:hover{background:var(--ink);color:var(--paper);transform:translateY(-5px);box-shadow:0 18px 40px rgba(10,10,10,.14)}
+    .pj-preview{height:190px;display:flex;flex-direction:column;justify-content:space-between;padding:1.25rem 1.35rem;position:relative;overflow:hidden;color:var(--paper);background:linear-gradient(135deg,#1d2430,#4c5969)}
+    .pj-preview::before{content:'';position:absolute;width:250px;height:250px;border:1px solid rgba(255,255,255,.2);border-radius:50%;inset-inline-end:-75px;bottom:-135px;box-shadow:0 0 0 22px rgba(255,255,255,.04),0 0 0 44px rgba(255,255,255,.03)}
+    .pj-preview::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.12) 50%,transparent 65%);transform:translateX(-100%);transition:transform .6s ease}
+    .proj-row:hover .pj-preview::after{transform:translateX(100%)}
+    .pj-preview-top{display:flex;justify-content:space-between;gap:1rem;position:relative;z-index:1;font-family:var(--monof);font-size:.58rem;letter-spacing:.09em;opacity:.78}
+    .pj-preview strong{position:relative;z-index:1;font-family:var(--disp);font-size:clamp(3.8rem,7vw,6.5rem);font-weight:400;line-height:.72;letter-spacing:-.05em}
+    .pj-preview-label{position:relative;z-index:1;font-family:var(--monof);font-size:.62rem;letter-spacing:.1em;opacity:.82}
+    .pj-preview.p2{background:linear-gradient(135deg,#203b39,#4f8377)}
+    .pj-preview.p3{background:linear-gradient(135deg,#30241e,#b27750)}
+    .pj-preview.p4{background:linear-gradient(135deg,#25324e,#7e9ac2)}
+    .pj-preview.p5{background:linear-gradient(135deg,#421f27,#bb6954)}
+    .pj-preview.p6{background:linear-gradient(135deg,#242a45,#736994)}
+    .pj-preview.p7{background:linear-gradient(135deg,#173b43,#4b9a91)}
+    .pj-preview.p8{background:linear-gradient(135deg,#40372a,#af9464)}
+    .pj-preview.p9{background:linear-gradient(135deg,#261f3b,#8565a8)}
+    .pj-preview.p10{background:linear-gradient(135deg,#17362c,#739b67)}
+    .pj-card-body{display:flex;flex-direction:column;align-items:stretch;gap:.65rem;padding:1.35rem 1.35rem 1.2rem;min-height:190px}
+    .pj-topline{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .pj-num{font-size:1.15rem;color:var(--flame);line-height:1}
+    .pj-cat{font-family:var(--monof);font-size:.62rem;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
+    .pj-name{font-family:var(--disp);font-size:2rem;line-height:1.05;letter-spacing:-.01em}
+    .pj-desc{color:var(--mute);font-size:.84rem;line-height:1.7;max-width:34rem}
+    .pj-action{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:auto;padding-top:.7rem;font-size:.78rem;font-weight:700}
+    .pj-arrow{width:36px;height:36px;flex:0 0 auto;border-radius:50%;border:1px solid currentColor;display:flex;align-items:center;justify-content:center;transition:.3s}
+    .proj-row:hover .pj-desc,.proj-row:hover .pj-cat{color:rgba(255,255,255,.62)}
+    .proj-row:hover .pj-num{color:var(--flame)}
+    .proj-row:hover .pj-arrow{background:var(--flame);border-color:var(--flame);color:var(--paper);transform:translateX(-3px)}
+    .work-cta{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-top:3rem;padding:2rem 0;border-top:1px solid var(--line)}
+    .work-cta h3{font-family:var(--disp);font-size:clamp(2rem,4vw,3.2rem);font-weight:400;line-height:1.05;margin:.55rem 0 .35rem}
+    .work-cta p{color:var(--mute);font-size:.9rem}
+    @media(max-width:760px){.work-list{grid-template-columns:1fr}.pj-preview{height:165px}.work-cta{align-items:flex-start;flex-direction:column}}
+    
 </style>
 </head>
 <body>
@@ -185,19 +223,49 @@ footer{background:var(--ink);color:var(--paper);padding:5rem 0 2rem}
 
 <section id="work"><div class="wrap">
  <div class="sec-head rv"><span class="sec-num">/03</span><div class="sec-t"><h2><span data-t="wt1"></span> <em class="italic" style="color:var(--flame)" data-t="wt2"></em></h2><p data-t="ws"></p></div></div>
- <div class="work-head rv"><span>No.</span><span data-t="wh1"></span><span data-t="wh2"></span><span data-t="wh3"></span><span></span></div>
  <div class="work-list rv">
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/TEO-STORE/"><span class="pj-num">01</span><span class="pj-name">TEO STORE</span><span class="pj-desc" data-t="w1"></span><span class="pj-cat" data-t="w1g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Shgps.ma/"><span class="pj-num">02</span><span class="pj-name">SHGPS.MA</span><span class="pj-desc" data-t="w11"></span><span class="pj-cat" data-t="w11g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/atheer-parfums/"><span class="pj-num">03</span><span class="pj-name">ATHEER</span><span class="pj-desc" data-t="w2"></span><span class="pj-cat" data-t="w2g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/IRRI10/"><span class="pj-num">04</span><span class="pj-name">IRRI10</span><span class="pj-desc" data-t="w12"></span><span class="pj-cat" data-t="w12g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Super/"><span class="pj-num">05</span><span class="pj-name">SUPER</span><span class="pj-desc" data-t="w13"></span><span class="pj-cat" data-t="w13g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/my-sindbad/"><span class="pj-num">06</span><span class="pj-name">MY SINDBAD</span><span class="pj-desc" data-t="w6"></span><span class="pj-cat" data-t="w6g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Smart-Product/"><span class="pj-num">07</span><span class="pj-name">SMART PRODUCT</span><span class="pj-desc" data-t="w7"></span><span class="pj-cat" data-t="w7g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/LOOMO/"><span class="pj-num">08</span><span class="pj-name">LOOMO</span><span class="pj-desc" data-t="w8"></span><span class="pj-cat" data-t="w8g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/SPLICE/"><span class="pj-num">09</span><span class="pj-name">SPLICE</span><span class="pj-desc" data-t="w9"></span><span class="pj-cat" data-t="w9g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/starbucks-store/"><span class="pj-num">10</span><span class="pj-name">STARBUCKS</span><span class="pj-desc" data-t="w10"></span><span class="pj-cat" data-t="w10g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/TEO-STORE/">
+     <span class="pj-preview p1"><span class="pj-preview-top"><span>VEXORA / 01</span><span>LIVE DEMO</span></span><strong>TEO</strong><span class="pj-preview-label">DIGITAL STORE</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">01</span><span class="pj-cat" data-t="w1g"></span></span><span class="pj-name">TEO STORE</span><span class="pj-desc" data-t="w1"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Shgps.ma/">
+     <span class="pj-preview p2"><span class="pj-preview-top"><span>VEXORA / 02</span><span>LIVE DEMO</span></span><strong>SHG</strong><span class="pj-preview-label">GPS PLATFORM</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">02</span><span class="pj-cat" data-t="w11g"></span></span><span class="pj-name">SHGPS.MA</span><span class="pj-desc" data-t="w11"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/atheer-parfums/">
+     <span class="pj-preview p3"><span class="pj-preview-top"><span>VEXORA / 03</span><span>LIVE DEMO</span></span><strong>ATH</strong><span class="pj-preview-label">LUXURY E-COMMERCE</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">03</span><span class="pj-cat" data-t="w2g"></span></span><span class="pj-name">ATHEER</span><span class="pj-desc" data-t="w2"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/IRRI10/">
+     <span class="pj-preview p4"><span class="pj-preview-top"><span>VEXORA / 04</span><span>LIVE DEMO</span></span><strong>IRR</strong><span class="pj-preview-label">SOLAR EXPERIENCE</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">04</span><span class="pj-cat" data-t="w12g"></span></span><span class="pj-name">IRRI10</span><span class="pj-desc" data-t="w12"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Super/">
+     <span class="pj-preview p5"><span class="pj-preview-top"><span>VEXORA / 05</span><span>LIVE DEMO</span></span><strong>SUP</strong><span class="pj-preview-label">MARKET INDEX</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">05</span><span class="pj-cat" data-t="w13g"></span></span><span class="pj-name">SUPER</span><span class="pj-desc" data-t="w13"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/my-sindbad/">
+     <span class="pj-preview p6"><span class="pj-preview-top"><span>VEXORA / 06</span><span>LIVE DEMO</span></span><strong>SIN</strong><span class="pj-preview-label">SMART TRAVEL</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">06</span><span class="pj-cat" data-t="w6g"></span></span><span class="pj-name">MY SINDBAD</span><span class="pj-desc" data-t="w6"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Smart-Product/">
+     <span class="pj-preview p7"><span class="pj-preview-top"><span>VEXORA / 07</span><span>LIVE DEMO</span></span><strong>SMP</strong><span class="pj-preview-label">PRODUCT CATALOG</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">07</span><span class="pj-cat" data-t="w7g"></span></span><span class="pj-name">SMART PRODUCT</span><span class="pj-desc" data-t="w7"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/LOOMO/">
+     <span class="pj-preview p8"><span class="pj-preview-top"><span>VEXORA / 08</span><span>LIVE DEMO</span></span><strong>LOO</strong><span class="pj-preview-label">DIGITAL BRAND</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">08</span><span class="pj-cat" data-t="w8g"></span></span><span class="pj-name">LOOMO</span><span class="pj-desc" data-t="w8"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/SPLICE/">
+     <span class="pj-preview p9"><span class="pj-preview-top"><span>VEXORA / 09</span><span>LIVE DEMO</span></span><strong>SPL</strong><span class="pj-preview-label">LIVE SOCIAL</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">09</span><span class="pj-cat" data-t="w9g"></span></span><span class="pj-name">SPLICE</span><span class="pj-desc" data-t="w9"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
+    <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/starbucks-store/">
+     <span class="pj-preview p10"><span class="pj-preview-top"><span>VEXORA / 10</span><span>LIVE DEMO</span></span><strong>STB</strong><span class="pj-preview-label">BRAND EXPERIENCE</span></span>
+     <span class="pj-card-body"><span class="pj-topline"><span class="pj-num">10</span><span class="pj-cat" data-t="w10g"></span></span><span class="pj-name">STARBUCKS</span><span class="pj-desc" data-t="w10"></span><span class="pj-action"><span data-t="demoCta"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></span></span>
+    </a>
  </div>
+    <div class="work-cta rv"><div><span class="mono" data-t="ctaLabel"></span><h3 data-t="ctaTitle"></h3><p data-t="ctaBody"></p></div><a class="btn fill" href="#contact"><span data-t="ctaBtn"></span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
 </div></section>
 
 <section><div class="wrap">
@@ -256,7 +324,7 @@ footer{background:var(--ink);color:var(--paper);padding:5rem 0 2rem}
 <script>
 const WA='212778878421';
 const T={
-n2:{ar:'المنهجية',en:'Process'},n3:{ar:'النماذج التجريبية',en:'Experimental Demos'},n4:{ar:'أسئلة',en:'FAQ'},n5:{ar:'تواصل',en:'Contact'},n6:{ar:'ابدأ مشروعك',en:'Start Project'},
+n2:{ar:'المنهجية',en:'Process'},n3:{ar:'النماذج الحية',en:'Live Work'},n4:{ar:'أسئلة',en:'FAQ'},n5:{ar:'تواصل',en:'Contact'},n6:{ar:'ابدأ مشروعك',en:'Start Project'},
 pill:{ar:'استوديو رقمي مستقل',en:'Independent Digital Atelier'},
 h1a:{ar:'نصنع',en:'We craft'},h1b:{ar:'حلولاً رقمية',en:'digital'},h1c:{ar:'تُحدث فرقاً.',en:'solutions that matter.'},
 hs:{ar:'استوديو رقمي مستقل يصمم ويطوّر مواقع وتطبيقات ومتاجر وأنظمة إدارة — بلمسة فنية ومعايير عالمية. كل مشروع نصنعه يُروى كقصة.',en:'An independent digital atelier designing & building websites, apps, stores and systems — with an artistic touch and global standards.'},
@@ -269,8 +337,8 @@ p1t:{ar:'نقاش مجاني',en:'Free Consultation'},p1d:{ar:'نفهم فكرت
 p2t:{ar:'عرض شفاف',en:'Clear Quote'},p2d:{ar:'ثمن ومدة كتابةً قبل البدء.',en:'Price & timeline in writing before we start.'},
 p3t:{ar:'تنفيذ حيّ',en:'Live Build'},p3d:{ar:'تتابع المشروع خطوة بخطوة.',en:'You follow the project step by step.'},
 p4t:{ar:'إطلاق ودعم',en:'Launch & Care'},p4d:{ar:'نشر وتدريب ودعم مستمر.',en:'Deployment, training & ongoing support.'},
-wt1:{ar:'النماذج',en:'Experimental'},wt2:{ar:'التجريبية',en:'Demos'},
-ws:{ar:'كل رابط هنا مشروع حقيقي منشور ومشتغل. اضغط لتجربته مباشرة.',en:'Every link below is a real, published, working project. Click to try it live.'},
+wt1:{ar:'نماذج حية',en:'Live'},wt2:{ar:'من أعمالنا',en:'work'},
+ws:{ar:'تجارب رقمية منشورة يمكنك فتحها الآن — كل مشروع يوضح كيف تتحول الفكرة إلى تجربة حقيقية.',en:'Published digital experiences you can open now — each project shows how an idea becomes a real product.'},
 wh1:{ar:'المشروع',en:'Project'},wh2:{ar:'الوصف',en:'Description'},wh3:{ar:'النوع',en:'Type'},
 w1:{ar:'متجر رقمي عصري للمنتجات والخدمات الرقمية.',en:'Modern digital store for digital products & services.'},w1g:{ar:'متجر رقمي',en:'Digital Store'},
 w2:{ar:'متجر عطور فاخر بتجربة شراء مميزة.',en:'Luxury perfume store with a premium buying experience.'},w2g:{ar:'متجر فاخر',en:'Luxury'},
@@ -279,7 +347,7 @@ w6:{ar:'مساعد سفر ذكي لتخطيط الرحلات.',en:'Smart travel 
 w7:{ar:'متجر منتجات بكتالوج احترافي.',en:'Product store with a professional catalog.'},w7g:{ar:'متجر',en:'Store'},
 w8:{ar:'علامة رقمية ببساطة وحضور.',en:'Digital brand with simplicity & presence.'},w8g:{ar:'علامة',en:'Brand'},
 w9:{ar:'منصة بث وتواصل اجتماعي.',en:'Streaming & social interaction platform.'},w9g:{ar:'اجتماعي',en:'Social'},
-w10:{ar:'متجر مستوحى من تجربة المقاهي العالمية.',en:'Store inspired by global coffee-shop experience.'},w10g:{ar:'تجربة',en:'Experience'},w11:{ar:'منصة رقمية للخدمات.',en:'Digital services platform.'},w11g:{ar:'منصة',en:'Platform'},w12:{ar:'تجربة رقمية تفاعلية.',en:'Interactive digital experience.'},w12g:{ar:'تجربة',en:'Experience'},w13:{ar:'واجهة رقمية للمنتجات.',en:'Digital product interface.'},w13g:{ar:'منتجات',en:'Product'},
+w10:{ar:'متجر مستوحى من تجربة المقاهي العالمية.',en:'Store inspired by global coffee-shop experience.'},w10g:{ar:'تجربة',en:'Experience'},w11:{ar:'منصة رقمية للخدمات.',en:'Digital services platform.'},w11g:{ar:'منصة',en:'Platform'},w12:{ar:'تجربة رقمية تفاعلية.',en:'Interactive digital experience.'},w12g:{ar:'تجربة',en:'Experience'},w13:{ar:'واجهة رقمية للمنتجات.',en:'Digital product interface.'},w13g:{ar:'منتجات',en:'Product'},demoCta:{ar:'تجربة المشروع',en:'Open project'},ctaLabel:{ar:'الخطوة التالية',en:'Next step'},ctaTitle:{ar:'هل مشروعك التالي هنا؟',en:'Could your next project be here?'},ctaBody:{ar:'أرسل فكرتك وسنحوّلها إلى تجربة رقمية تستحق أن تُرى.',en:'Share your idea and we will turn it into a digital experience worth seeing.'},ctaBtn:{ar:'ابدأ مشروعك',en:'Start your project'},
 go:{ar:'العرض',en:'The offer'},gt1:{ar:'احجز مكانك',en:'Claim your'},gt2:{ar:'الآن',en:'spot now'},
 gs:{ar:'عرض الإطلاق: خصم 50% لأول 3 عملاء فقط. نبني علاقات طويلة، لا صفقات مؤقتة.',en:'Launch offer: 50% off for the first 3 clients only. We build long-term relationships, not temporary deals.'},
 oc:{ar:'احجز العرض',en:'Claim the Offer'},
