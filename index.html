@@ -76,16 +76,6 @@ section{padding:6rem 0;border-bottom:1px solid var(--line)}
 .sec-num{font-family:var(--disp);font-size:4.5rem;font-style:italic;color:var(--flame);line-height:.8}
 .sec-t h2{font-family:var(--disp);font-size:clamp(2rem,4vw,3.4rem);font-weight:400;line-height:1.1;margin-bottom:1rem}
 .sec-t p{color:var(--mute);font-size:1rem;line-height:1.9;max-width:620px}
-/* services */
-.services{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
-.srv{border-inline-start:1px solid var(--line);padding:2.5rem;transition:.3s;background:var(--paper)}
-.srv:first-child{border-inline-start:none}
-.srv:hover{background:var(--ink);color:var(--paper)}
-.srv:hover p{color:rgba(255,255,255,.7)}
-.srv:hover .srv-num{color:var(--flame)}
-.srv-num{font-family:var(--monof);font-size:.7rem;color:var(--mute);display:block;margin-bottom:2rem;letter-spacing:.1em}
-.srv h3{font-family:var(--disp);font-size:1.9rem;font-weight:400;line-height:1.15;margin-bottom:1rem}
-.srv p{color:var(--mute);font-size:.88rem;line-height:1.8;transition:.3s}
 /* process */
 .proc{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}
 .proc-step{border-inline-start:1px solid var(--line);padding:2rem;background:var(--paper)}
@@ -153,19 +143,19 @@ footer{background:var(--ink);color:var(--paper);padding:5rem 0 2rem}
 .f-bot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:rgba(255,255,255,.5);font-family:var(--monof);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}
 .wa-float{position:fixed;bottom:2rem;inset-inline-end:2rem;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--flame);color:var(--paper);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 40px rgba(255,69,0,.35);transition:.3s;border:2px solid var(--paper)}
 .wa-float:hover{transform:scale(1.06);background:var(--ink)}
-@media(max-width:1024px){.nav-mid{display:none}.burger{display:block}.services,.proc{grid-template-columns:1fr 1fr}.srv:nth-child(odd),.proc-step:nth-child(odd){border-inline-start:none}.proj-row,.work-head{grid-template-columns:40px 1fr auto;gap:1rem}.pj-desc,.pj-cat,.work-head span:nth-child(3),.work-head span:nth-child(4){display:none}.g-wrap,.contact{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.services,.proc,.hero-grid,.f-grid{grid-template-columns:1fr}.srv,.proc-step{border-inline-start:none!important;border-top:1px solid var(--line)}.wrap{padding:0 1.25rem}.nav-in{padding:1rem 1.25rem}}
+@media(max-width:1024px){.nav-mid{display:none}.burger{display:block}.proc{grid-template-columns:1fr 1fr}.proc-step:nth-child(odd){border-inline-start:none}.proj-row,.work-head{grid-template-columns:40px 1fr auto;gap:1rem}.pj-desc,.pj-cat,.work-head span:nth-child(3),.work-head span:nth-child(4){display:none}.g-wrap,.contact{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.proc,.hero-grid,.f-grid{grid-template-columns:1fr}.proc-step{border-inline-start:none!important;border-top:1px solid var(--line)}.wrap{padding:0 1.25rem}.nav-in{padding:1rem 1.25rem}}
 </style>
 </head>
 <body>
 
 <nav><div class="nav-in">
  <a class="logo" href="#"><span class="dot"></span><span>Vexora</span></a>
- <div class="nav-mid"><a href="#services" data-t="n1"></a><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div>
+ <div class="nav-mid"><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div>
  <div class="nav-r"><span class="time" id="clock"></span><button class="lang" id="langBtn" onclick="setLang(cur==='ar'?'en':'ar')">EN</button><a class="btn fill" style="padding:.5rem 1.1rem;font-size:.75rem" href="#contact" data-t="n6"></a>
  <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
 </div>
-<div class="mnav" id="mnav"><a href="#services" data-t="n1"></a><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div></nav>
+<div class="mnav" id="mnav"><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div></nav>
 
 <header><div class="wrap">
  <div class="hero-tag"><span class="pill"><i></i><span data-t="pill"></span></span><span class="meta">EST. 2026 — CASABLANCA / WORLDWIDE</span></div>
@@ -183,18 +173,6 @@ footer{background:var(--ink);color:var(--paper);padding:5rem 0 2rem}
 
 <div class="mq"><div class="mq-in" id="mq"><span>Web <i></i> Mobile <i></i> E-Commerce <i></i> <b>UI/UX</b> <i></i> Systems <i></i> <b>Branding</b> <i></i> Streaming <i></i> AI <i></i>&nbsp;</span></div></div>
 
-<section id="services"><div class="wrap">
- <div class="sec-head rv"><span class="sec-num">/01</span><div class="sec-t"><h2><span data-t="st1"></span> <em class="italic" style="color:var(--flame)" data-t="st2"></em></h2><p data-t="ss"></p></div></div>
- <div class="services rv">
-  <div class="srv"><span class="srv-num">— 01</span><h3><span data-t="s1t1"></span> <em class="italic" data-t="s1t2"></em></h3><p data-t="s1d"></p></div>
-  <div class="srv"><span class="srv-num">— 02</span><h3><span data-t="s2t1"></span> <em class="italic" data-t="s2t2"></em></h3><p data-t="s2d"></p></div>
-  <div class="srv"><span class="srv-num">— 03</span><h3><span data-t="s3t1"></span> <em class="italic" data-t="s3t2"></em></h3><p data-t="s3d"></p></div>
-  <div class="srv"><span class="srv-num">— 04</span><h3><span data-t="s4t1"></span> <em class="italic" data-t="s4t2"></em></h3><p data-t="s4d"></p></div>
-  <div class="srv"><span class="srv-num">— 05</span><h3><span data-t="s5t1"></span> <em class="italic" data-t="s5t2"></em></h3><p data-t="s5d"></p></div>
-  <div class="srv"><span class="srv-num">— 06</span><h3><span data-t="s6t1"></span> <em class="italic" data-t="s6t2"></em></h3><p data-t="s6d"></p></div>
- </div>
-</div></section>
-
 <section id="process" style="background:var(--paper-2)"><div class="wrap">
  <div class="sec-head rv"><span class="sec-num">/02</span><div class="sec-t"><h2><span data-t="pt1"></span> <em class="italic" style="color:var(--flame)" data-t="pt2"></em></h2><p data-t="ps"></p></div></div>
  <div class="proc rv">
@@ -209,17 +187,16 @@ footer{background:var(--ink);color:var(--paper);padding:5rem 0 2rem}
  <div class="sec-head rv"><span class="sec-num">/03</span><div class="sec-t"><h2><span data-t="wt1"></span> <em class="italic" style="color:var(--flame)" data-t="wt2"></em></h2><p data-t="ws"></p></div></div>
  <div class="work-head rv"><span>No.</span><span data-t="wh1"></span><span data-t="wh2"></span><span data-t="wh3"></span><span></span></div>
  <div class="work-list rv">
-  <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/TEO-STORE/"><span class="pj-num">01</span><span class="pj-name">TEO STORE</span><span class="pj-desc" data-t="w1"></span><span class="pj-cat" data-t="w1g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/atheer-parfums/"><span class="pj-num">02</span><span class="pj-name">ATHEER</span><span class="pj-desc" data-t="w2"></span><span class="pj-cat" data-t="w2g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/Rassed/"><span class="pj-num">03</span><span class="pj-name">RASSED</span><span class="pj-desc" data-t="w3"></span><span class="pj-cat" data-t="w3g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/my-sindbad/"><span class="pj-num">04</span><span class="pj-name">MY SINDBAD</span><span class="pj-desc" data-t="w6"></span><span class="pj-cat" data-t="w6g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/Smart-Product/"><span class="pj-num">05</span><span class="pj-name">SMART PRODUCT</span><span class="pj-desc" data-t="w7"></span><span class="pj-cat" data-t="w7g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/LOOMO/"><span class="pj-num">06</span><span class="pj-name">LOOMO</span><span class="pj-desc" data-t="w8"></span><span class="pj-cat" data-t="w8g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/SPLICE/"><span class="pj-num">07</span><span class="pj-name">SPLICE</span><span class="pj-desc" data-t="w9"></span><span class="pj-cat" data-t="w9g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-  <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/starbucks-store/"><span class="pj-num">08</span><span class="pj-name">STARBUCKS</span><span class="pj-desc" data-t="w10"></span><span class="pj-cat" data-t="w10g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-   <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/Shgps.ma/"><span class="pj-num">09</span><span class="pj-name">SHGPS.MA</span><span class="pj-desc">منصة رقمية للخدمات.</span><span class="pj-cat">Platform</span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-   <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/IRRI10/"><span class="pj-num">10</span><span class="pj-name">IRRI10</span><span class="pj-desc">تجربة رقمية تفاعلية.</span><span class="pj-cat">Experience</span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-   <a class="proj-row" target="_blank" href="https://alanshahd82-dotcom.github.io/Super/"><span class="pj-num">11</span><span class="pj-name">SUPER</span><span class="pj-desc">واجهة رقمية للمنتجات.</span><span class="pj-cat">Product</span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/TEO-STORE/"><span class="pj-num">01</span><span class="pj-name">TEO STORE</span><span class="pj-desc" data-t="w1"></span><span class="pj-cat" data-t="w1g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Shgps.ma/"><span class="pj-num">02</span><span class="pj-name">SHGPS.MA</span><span class="pj-desc" data-t="w11"></span><span class="pj-cat" data-t="w11g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/atheer-parfums/"><span class="pj-num">03</span><span class="pj-name">ATHEER</span><span class="pj-desc" data-t="w2"></span><span class="pj-cat" data-t="w2g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/IRRI10/"><span class="pj-num">04</span><span class="pj-name">IRRI10</span><span class="pj-desc" data-t="w12"></span><span class="pj-cat" data-t="w12g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Super/"><span class="pj-num">05</span><span class="pj-name">SUPER</span><span class="pj-desc" data-t="w13"></span><span class="pj-cat" data-t="w13g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/my-sindbad/"><span class="pj-num">06</span><span class="pj-name">MY SINDBAD</span><span class="pj-desc" data-t="w6"></span><span class="pj-cat" data-t="w6g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Smart-Product/"><span class="pj-num">07</span><span class="pj-name">SMART PRODUCT</span><span class="pj-desc" data-t="w7"></span><span class="pj-cat" data-t="w7g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/LOOMO/"><span class="pj-num">08</span><span class="pj-name">LOOMO</span><span class="pj-desc" data-t="w8"></span><span class="pj-cat" data-t="w8g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/SPLICE/"><span class="pj-num">09</span><span class="pj-name">SPLICE</span><span class="pj-desc" data-t="w9"></span><span class="pj-cat" data-t="w9g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  <a class="proj-row" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/starbucks-store/"><span class="pj-num">10</span><span class="pj-name">STARBUCKS</span><span class="pj-desc" data-t="w10"></span><span class="pj-cat" data-t="w10g"></span><span class="pj-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
  </div>
 </div></section>
 
@@ -268,8 +245,7 @@ footer{background:var(--ink);color:var(--paper);padding:5rem 0 2rem}
 <footer><div class="wrap">
  <div class="f-big rv"><span data-t="fb1"></span> <span class="flame" data-t="fb2"></span></div>
  <div class="f-grid">
-  <div><h4 data-t="fr2"></h4><a href="#services" data-t="n1"></a><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div>
-  <div><h4 data-t="fr3"></h4><a href="#services" data-t="s1t1"></a><a href="#services" data-t="s2t1"></a><a href="#services" data-t="s3t1"></a><a href="#services" data-t="s4t1"></a><a href="#services" data-t="s5t1"></a></div>
+  <div><h4 data-t="fr2"></h4><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div>
   <div><h4 data-t="fr4"></h4><a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a><a href="#">Dribbble</a></div>
  </div>
  <div class="f-bot"><span>© 2026 Vexora — <span data-t="fr5"></span></span><span data-t="fr6"></span><span>Made with care</span></div>
@@ -280,37 +256,30 @@ footer{background:var(--ink);color:var(--paper);padding:5rem 0 2rem}
 <script>
 const WA='212778878421';
 const T={
-n1:{ar:'الخدمات',en:'Services'},n2:{ar:'المنهجية',en:'Process'},n3:{ar:'الأعمال',en:'Work'},n4:{ar:'أسئلة',en:'FAQ'},n5:{ar:'تواصل',en:'Contact'},n6:{ar:'ابدأ مشروعك',en:'Start Project'},
+n2:{ar:'المنهجية',en:'Process'},n3:{ar:'النماذج التجريبية',en:'Experimental Demos'},n4:{ar:'أسئلة',en:'FAQ'},n5:{ar:'تواصل',en:'Contact'},n6:{ar:'ابدأ مشروعك',en:'Start Project'},
 pill:{ar:'استوديو رقمي مستقل',en:'Independent Digital Atelier'},
 h1a:{ar:'نصنع',en:'We craft'},h1b:{ar:'حلولاً رقمية',en:'digital'},h1c:{ar:'تُحدث فرقاً.',en:'solutions that matter.'},
 hs:{ar:'استوديو رقمي مستقل يصمم ويطوّر مواقع وتطبيقات ومتاجر وأنظمة إدارة — بلمسة فنية ومعايير عالمية. كل مشروع نصنعه يُروى كقصة.',en:'An independent digital atelier designing & building websites, apps, stores and systems — with an artistic touch and global standards.'},
 hc1:{ar:'ابدأ محادثة',en:'Start a Conversation'},hc2:{ar:'استكشف الأعمال',en:'Explore the Work'},
 t1:{ar:'مشروع منشور',en:'Published projects'},t2:{ar:'دعم ومتابعة',en:'Ongoing support'},t3:{ar:'وقت الرد',en:'Response time'},
-st1:{ar:'ماذا',en:'What we'},st2:{ar:'نصنع',en:'craft'},
-ss:{ar:'ست خدمات متكاملة تحت سقف واحد — كل واحدة مُصممة لتجعل مشروعك يبرز.',en:'Six integrated services under one roof — each designed to make your project stand out.'},
-s1t1:{ar:'مواقع',en:'Websites'},s1t2:{ar:'إلكترونية',en:''},s1d:{ar:'مواقع سريعة وآمنة بتصميم جذاب ومتوافقة مع جميع الأجهزة ومحركات البحث.',en:'Fast, secure websites with striking design — fully responsive and SEO-ready.'},
-s2t1:{ar:'تطبيقات',en:'Mobile'},s2t2:{ar:'ذكية',en:'apps'},s2d:{ar:'تطبيقات Android و iOS بتجربة استخدام عصرية وأداء عالٍ.',en:'Android & iOS apps with modern UX and high performance.'},
-s3t1:{ar:'متاجر',en:'E-Commerce'},s3t2:{ar:'إلكترونية',en:'stores'},s3d:{ar:'متاجر كاملة: دفع، طلبات، مخزون وتتبع — جاهزة للبيع.',en:'Complete stores: payments, orders, inventory & tracking — ready to sell.'},
-s4t1:{ar:'تصميم',en:'UI/UX'},s4t2:{ar:'الواجهة',en:'design'},s4d:{ar:'هوية بصرية وتجربة استخدام تميّزك عن منافسيك.',en:'Visual identity & UX that set you apart from competitors.'},
-s5t1:{ar:'أنظمة',en:'Business'},s5t2:{ar:'إدارة',en:'systems'},s5d:{ar:'لوحات تحكم للمشتركين والفواتير والتحصيل حسب نشاطك.',en:'Dashboards for subscribers, billing & collections tailored to your business.'},
-s6t1:{ar:'دعم',en:'Support'},s6t2:{ar:'وصيانة',en:'& care'},s6d:{ar:'تحديثات ومراقبة ودعم مستمر بعد الإطلاق — لا نختفي بعد التسليم.',en:'Updates, monitoring & ongoing support after launch — we never disappear.'},
+st1:{ar:'ماذا',en:'What we'},st2:{ar:'نصنع',en:'craft'},s1t2:{ar:'إلكترونية',en:''},s1d:{ar:'مواقع سريعة وآمنة بتصميم جذاب ومتوافقة مع جميع الأجهزة ومحركات البحث.',en:'Fast, secure websites with striking design — fully responsive and SEO-ready.'},s2t2:{ar:'ذكية',en:'apps'},s2d:{ar:'تطبيقات Android و iOS بتجربة استخدام عصرية وأداء عالٍ.',en:'Android & iOS apps with modern UX and high performance.'},s3t2:{ar:'إلكترونية',en:'stores'},s3d:{ar:'متاجر كاملة: دفع، طلبات، مخزون وتتبع — جاهزة للبيع.',en:'Complete stores: payments, orders, inventory & tracking — ready to sell.'},s4t2:{ar:'الواجهة',en:'design'},s4d:{ar:'هوية بصرية وتجربة استخدام تميّزك عن منافسيك.',en:'Visual identity & UX that set you apart from competitors.'},s5t2:{ar:'إدارة',en:'systems'},s5d:{ar:'لوحات تحكم للمشتركين والفواتير والتحصيل حسب نشاطك.',en:'Dashboards for subscribers, billing & collections tailored to your business.'},s6t2:{ar:'وصيانة',en:'& care'},s6d:{ar:'تحديثات ومراقبة ودعم مستمر بعد الإطلاق — لا نختفي بعد التسليم.',en:'Updates, monitoring & ongoing support after launch — we never disappear.'},
 pt1:{ar:'كيف',en:'How we'},pt2:{ar:'نعمل',en:'work'},
 ps:{ar:'أربع خطوات واضحة من الفكرة الأولى إلى الإطلاق النهائي.',en:'Four clear steps from the first idea to the final launch.'},
 p1t:{ar:'نقاش مجاني',en:'Free Consultation'},p1d:{ar:'نفهم فكرتك بدون أي التزام.',en:'We understand your idea — no commitment.'},
 p2t:{ar:'عرض شفاف',en:'Clear Quote'},p2d:{ar:'ثمن ومدة كتابةً قبل البدء.',en:'Price & timeline in writing before we start.'},
 p3t:{ar:'تنفيذ حيّ',en:'Live Build'},p3d:{ar:'تتابع المشروع خطوة بخطوة.',en:'You follow the project step by step.'},
 p4t:{ar:'إطلاق ودعم',en:'Launch & Care'},p4d:{ar:'نشر وتدريب ودعم مستمر.',en:'Deployment, training & ongoing support.'},
-wt1:{ar:'أعمال',en:'Selected'},wt2:{ar:'مختارة',en:'work'},
+wt1:{ar:'النماذج',en:'Experimental'},wt2:{ar:'التجريبية',en:'Demos'},
 ws:{ar:'كل رابط هنا مشروع حقيقي منشور ومشتغل. اضغط لتجربته مباشرة.',en:'Every link below is a real, published, working project. Click to try it live.'},
 wh1:{ar:'المشروع',en:'Project'},wh2:{ar:'الوصف',en:'Description'},wh3:{ar:'النوع',en:'Type'},
 w1:{ar:'متجر رقمي عصري للمنتجات والخدمات الرقمية.',en:'Modern digital store for digital products & services.'},w1g:{ar:'متجر رقمي',en:'Digital Store'},
 w2:{ar:'متجر عطور فاخر بتجربة شراء مميزة.',en:'Luxury perfume store with a premium buying experience.'},w2g:{ar:'متجر فاخر',en:'Luxury'},
-w3:{ar:'لوحة تحكم لعمليات التوصيل والتتبع.',en:'Courier-operations dashboard with tracking & alerts.'},w3g:{ar:'نظام إدارة',en:'SaaS'},
+
 w6:{ar:'مساعد سفر ذكي لتخطيط الرحلات.',en:'Smart travel companion for trip planning.'},w6g:{ar:'تطبيق سفر',en:'Travel'},
 w7:{ar:'متجر منتجات بكتالوج احترافي.',en:'Product store with a professional catalog.'},w7g:{ar:'متجر',en:'Store'},
 w8:{ar:'علامة رقمية ببساطة وحضور.',en:'Digital brand with simplicity & presence.'},w8g:{ar:'علامة',en:'Brand'},
 w9:{ar:'منصة بث وتواصل اجتماعي.',en:'Streaming & social interaction platform.'},w9g:{ar:'اجتماعي',en:'Social'},
-w10:{ar:'متجر مستوحى من تجربة المقاهي العالمية.',en:'Store inspired by global coffee-shop experience.'},w10g:{ar:'تجربة',en:'Experience'},
+w10:{ar:'متجر مستوحى من تجربة المقاهي العالمية.',en:'Store inspired by global coffee-shop experience.'},w10g:{ar:'تجربة',en:'Experience'},w11:{ar:'منصة رقمية للخدمات.',en:'Digital services platform.'},w11g:{ar:'منصة',en:'Platform'},w12:{ar:'تجربة رقمية تفاعلية.',en:'Interactive digital experience.'},w12g:{ar:'تجربة',en:'Experience'},w13:{ar:'واجهة رقمية للمنتجات.',en:'Digital product interface.'},w13g:{ar:'منتجات',en:'Product'},
 go:{ar:'العرض',en:'The offer'},gt1:{ar:'احجز مكانك',en:'Claim your'},gt2:{ar:'الآن',en:'spot now'},
 gs:{ar:'عرض الإطلاق: خصم 50% لأول 3 عملاء فقط. نبني علاقات طويلة، لا صفقات مؤقتة.',en:'Launch offer: 50% off for the first 3 clients only. We build long-term relationships, not temporary deals.'},
 oc:{ar:'احجز العرض',en:'Claim the Offer'},
