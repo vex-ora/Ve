@@ -2,7 +2,9 @@
 <html lang="ar" dir="rtl" id="root">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0b10">
+<link rel="canonical" href="https://vex-ora.github.io/Ve/">
 <title>VEXORA — حلول رقمية لعصر أذكى</title>
 <meta name="description" content="VEXORA: وكالة رقمية تصمم وتطور المواقع والتطبيقات والمتاجر والأنظمة الرقمية، مع نماذج تجريبية قابلة للعرض قبل اتخاذ القرار.">
 <meta property="og:title" content="VEXORA — حلول رقمية لعصر أذكى">
@@ -148,26 +150,43 @@ footer{border-top:1px solid var(--line);padding:3.5rem 0 2rem;background:var(--i
 .wa-float:hover{transform:scale(1.07)}
 @media(max-width:960px){.hero{grid-template-columns:1fr}.term{display:none}.grid3,.work{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr;gap:2rem}.steps::before{display:none}.stats{grid-template-columns:1fr 1fr}.g2,.contact{grid-template-columns:1fr}.nav-links{display:none}.burger{display:block}.mnav.open{display:flex}.fgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.grid3,.work,.steps,.fgrid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+
+/* responsive polish and accessibility */
+html{scroll-padding-top:5.5rem}
+body{min-width:320px;line-height:1.5}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.nav-in{min-height:64px}
+.mnav a{padding:.25rem 0;transition:color .2s,transform .2s}
+.mnav a:hover{color:var(--text);transform:translateX(-3px)}
+.proj .th .mono{max-width:90%;font-size:clamp(2rem,11vw,4.6rem);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+.cform input,.cform select,.cform textarea{min-height:48px}
+.cform textarea{resize:vertical}
+.cform :is(input,select,textarea):focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(6,182,212,.12)}
+@media(max-width:960px){header{padding-top:8.5rem}.nav-in{padding-inline:1rem}}
+@media(max-width:600px){section{padding:4.5rem 0}.wrap{padding-inline:1rem}.hero{gap:2rem}.hero h1{font-size:clamp(1.85rem,9vw,2.5rem)}.hero p{font-size:.92rem;line-height:1.9}.hero-btns{display:grid;grid-template-columns:1fr;width:100%}.hero-btns .btn{width:100%}.stats div{padding:.95rem .5rem}.stats b{font-size:1.2rem}.stats small{display:block;font-size:.65rem;line-height:1.45}.card,.offer{padding:1.35rem}.contact{gap:2rem}.cform{padding:1.25rem}.fbot{justify-content:center;text-align:center}.fbot span{width:100%}.nav-r{gap:.4rem}.nav-r .btn.sm{display:none}.lang{padding-inline:.7rem}.logo{font-size:.9rem;letter-spacing:2px}}
+@media(max-width:380px){.stats{grid-template-columns:1fr}.stats div{padding:1rem}.hero h1{font-size:1.8rem}.nav-in{padding-inline:.8rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute"><defs><linearGradient id="vx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
 
-<nav><div class="nav-in">
+<nav aria-label="التنقل الرئيسي"><div class="nav-in">
  <a class="logo" href="#"><svg width="28" height="28" viewBox="0 0 64 64"><path d="M10 10h14l8 26 8-26h14L36 54h-8z" fill="url(#vx)"/><ellipse cx="32" cy="34" rx="26" ry="8" fill="none" stroke="#db2777" stroke-width="2.5" transform="rotate(-16 32 34)"/></svg><span style="direction:ltr">VEXORA</span></a>
  <div class="nav-links"><a href="#services" data-t="n1"></a><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div>
- <div class="nav-r"><button class="lang" id="langBtn" onclick="setLang(cur==='ar'?'en':'ar')">EN</button><a class="btn p sm" href="#contact" data-t="n6"></a>
- <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
+ <div class="nav-r"><button type="button" class="lang" id="langBtn" aria-label="تغيير اللغة" onclick="setLang(cur==='ar'?'en':'ar')">EN</button><a class="btn p sm" href="#contact" data-t="n6"></a>
+ <button type="button" class="burger" aria-label="فتح قائمة التنقل" aria-controls="mnav" aria-expanded="false" onclick="toggleMenu(this)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
 </div>
-<div class="mnav" id="mnav"><a href="#services" data-t="n1"></a><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div></nav>
+<div class="mnav" id="mnav"><a onclick="closeMenu()" href="#services" data-t="n1"></a><a onclick="closeMenu()" href="#process" data-t="n2"></a><a onclick="closeMenu()" href="#work" data-t="n3"></a><a onclick="closeMenu()" href="#faq" data-t="n4"></a><a onclick="closeMenu()" href="#contact" data-t="n5"></a></div></nav>
 
 <header><div class="wrap hero">
  <div>
   <span class="ovl" data-t="ho"></span>
   <h1><span data-t="h1a"></span><br><span class="grad" data-t="h1b"></span></h1>
   <p data-t="hs"></p>
-  <div class="hero-btns"><a class="btn wa" id="waTop" href="#" target="_blank"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 .9c.3.2.5.2.6.4 0 .1 0 .8-.2 1.4z"/></svg><span data-t="hc1"></span></a><a class="btn g" href="#work"><span data-t="hc2"></span><svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div>
+  <div class="hero-btns"><a class="btn wa" id="waTop" href="#" target="_blank" rel="noopener noreferrer"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 .9c.3.2.5.2.6.4 0 .1 0 .8-.2 1.4z"/></svg><span data-t="hc1"></span></a><a class="btn g" href="#work"><span data-t="hc2"></span><svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div>
  </div>
  <div style="position:relative">
   <span class="chip a">Android • iOS • Web</span>
@@ -240,7 +259,7 @@ footer{border-top:1px solid var(--line);padding:3.5rem 0 2rem;background:var(--i
    <div><span class="ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span><b data-t="g3t"></b><small data-t="g3d"></small></span></div>
   </div>
  </div>
- <div class="offer rv"><div class="pct">-50%</div><h3 data-t="ot"></h3><p data-t="os"></p><a class="btn wa" id="waOffer" href="#" target="_blank" data-t="oc"></a></div>
+ <div class="offer rv"><div class="pct">-50%</div><h3 data-t="ot"></h3><p data-t="os"></p><a class="btn wa" id="waOffer" href="#" target="_blank" rel="noopener noreferrer" data-t="oc"></a></div>
 </div></section>
 
 <section id="faq" style="background:rgba(255,255,255,.015);border-block:1px solid var(--line)"><div class="wrap">
@@ -256,7 +275,7 @@ footer{border-top:1px solid var(--line);padding:3.5rem 0 2rem;background:var(--i
 <section id="contact"><div class="wrap contact">
  <div class="cinfo rv"><span class="ovl" data-t="co"></span><h2 style="font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:900" data-t="ct"></h2><p style="color:var(--muted);line-height:2;margin-top:.8rem" data-t="cs"></p>
   <span class="num">+212 778-878-421</span>
-  <a class="btn wa" id="waBig" href="#" target="_blank"><span data-t="hc1"></span></a></div>
+  <a class="btn wa" id="waBig" href="#" target="_blank" rel="noopener noreferrer"><span data-t="hc1"></span></a></div>
  <form class="cform rv" onsubmit="sendWa(event)">
   <input id="cName" type="text" autocomplete="name" required aria-label="الاسم" data-tp="fn">
   <select id="cServ" aria-label="الخدمة المطلوبة"><option data-t="o1"></option><option data-t="o2"></option><option data-t="o3"></option><option data-t="o4"></option><option data-t="o5"></option></select>
@@ -273,12 +292,12 @@ footer{border-top:1px solid var(--line);padding:3.5rem 0 2rem;background:var(--i
  </div>
  <div class="fbot"><span>© 2026 VEXORA — <span data-t="fr4"></span></span><span style="direction:ltr">Digital Solutions for a Smarter Tomorrow</span></div>
 </div></footer>
-<a class="wa-float" id="waFloat" href="#" target="_blank"><svg width="26" height="26" viewBox="0 0 24 24" fill="#052b1c"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 .9c.3.2.5.2.6.4 0 .1 0 .8-.2 1.4z"/></svg></a>
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener noreferrer"><svg width="26" height="26" viewBox="0 0 24 24" fill="#052b1c"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 .9c.3.2.5.2.6.4 0 .1 0 .8-.2 1.4z"/></svg></a>
 
 <script>
 const WA='212778878421';
 const T={
-n1:{ar:'الخدمات',en:'Services'},n2:{ar:'طريقة العمل',en:'Process'},n3:{ar:'أعمالنا',en:'Our Work'},n4:{ar:'أسئلة شائعة',en:'FAQ'},n5:{ar:'تواصل',en:'Contact'},n6:{ar:'اطلب عرض سعر',en:'Get a Quote'},
+n1:{ar:'الخدمات',en:'Services'},n2:{ar:'طريقة العمل',en:'Process'},n3:{ar:'نماذجنا',en:'Demos'},n4:{ar:'أسئلة شائعة',en:'FAQ'},n5:{ar:'تواصل',en:'Contact'},n6:{ar:'اطلب عرض سعر',en:'Get a Quote'},
 ho:{ar:'وكالة رقمية عالمية',en:'Global Digital Agency'},
 h1a:{ar:'المستقبل الرقمي',en:'Your Digital Future'},h1b:{ar:'يبدأ من هنا',en:'Starts Here'},
 hs:{ar:'نصمم ونطور مواقع وتطبيقات ومتاجر إلكترونية وأنظمة إدارة لعملائنا حول العالم. استكشف نماذجنا التجريبية وتعرّف على جودة التنفيذ قبل أن تبدأ مشروعك.',en:'We design & develop websites, apps, e-commerce stores and business systems for clients worldwide. Explore our demo projects and see the quality before you start.'},
@@ -314,24 +333,32 @@ o1:{ar:'موقع إلكتروني',en:'Website'},o2:{ar:'تطبيق موبايل
 fr1:{ar:'وكالة رقمية مستقلة نصمم ونطور حلولاً عالمية: مواقع، تطبيقات، متاجر وأنظمة إدارة — بجودة عالية والتزام كامل.',en:'An independent digital agency crafting global solutions: websites, apps, stores & business systems — high quality, full commitment.'},
 fr2:{ar:'روابط سريعة',en:'Quick Links'},fr3:{ar:'خدماتنا',en:'Services'},fr4:{ar:'جميع الحقوق محفوظة',en:'All rights reserved'}
 };
-let cur=localStorage.getItem('vx_lang')||'ar';
-function setLang(l){cur=l;localStorage.setItem('vx_lang',l);
+let cur='ar';
+try{cur=localStorage.getItem('vx_lang')||'ar';}catch{}
+function setLang(l){cur=l;try{localStorage.setItem('vx_lang',l);}catch{}
  const r=document.getElementById('root');r.lang=l;r.dir=l==='ar'?'rtl':'ltr';
- document.title=l==='ar'?'VEXORA — حلول رقمية لعصر أذكى':'VEXORA — Digital Solutions for a Smarter Tomorrow';
+ const title=l==='ar'?'VEXORA — حلول رقمية لعصر أذكى':'VEXORA — Digital Solutions for a Smarter Tomorrow';
+ const description=l==='ar'?'وكالة VEXORA الرقمية: مواقع وتطبيقات ومتاجر وأنظمة مخصصة مع نماذج تجريبية قابلة للعرض.':'VEXORA digital agency: websites, apps, e-commerce and custom systems with demo projects you can explore.';
+ document.title=title;
+ document.querySelector('meta[name="description"]')?.setAttribute('content',description);
+ document.querySelector('meta[property="og:title"]')?.setAttribute('content',title);
+ document.querySelector('meta[property="og:description"]')?.setAttribute('content',description);
  document.getElementById('langBtn').textContent=l==='ar'?'EN':'عربي';
  document.querySelectorAll('[data-t]').forEach(e=>{if(T[e.dataset.t])e.textContent=T[e.dataset.t][l];});
- document.querySelectorAll('[data-tp]').forEach(e=>{if(T[e.dataset.tp])e.placeholder=T[e.dataset.tp][l];});}
+ document.querySelectorAll('[data-tp]').forEach(e=>{if(T[e.dataset.tp])e.placeholder=T[e.dataset.tp][l];});
+ fixWa();}
 const waLink=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
 function fixWa(){const m=cur==='ar'?'مرحباً VEXORA، أريد مناقشة مشروع جديد.':'Hello VEXORA, I would like to discuss a new project.';
  ['waTop','waOffer','waFloat','waBig'].forEach(id=>{const e=document.getElementById(id);if(e)e.href=waLink(m);});}
 function sendWa(e){e.preventDefault();
  const n=document.getElementById('cName').value,s=document.getElementById('cServ').value,m=document.getElementById('cMsg').value;
  const t=cur==='ar'?`مرحباً VEXORA\nالاسم: ${n}\nالخدمة المطلوبة: ${s}\nالتفاصيل: ${m}`:`Hello VEXORA\nName: ${n}\nService: ${s}\nDetails: ${m}`;
- window.open(waLink(t),'_blank');}
+ e.target.reset();window.open(waLink(t),'_blank','noopener,noreferrer');}
 document.getElementById('mq').innerHTML+=document.getElementById('mq').innerHTML;
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-setLang(cur);fixWa();
+function toggleMenu(button){const menu=document.getElementById('mnav');const open=!menu.classList.contains('open');menu.classList.toggle('open',open);button.setAttribute('aria-expanded',String(open));}
+function closeMenu(){const menu=document.getElementById('mnav');const button=document.querySelector('.burger');menu.classList.remove('open');if(button)button.setAttribute('aria-expanded','false');}
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));}else{document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));}
+setLang(cur);
 </script>
 </body>
 </html>
