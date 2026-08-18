@@ -9,184 +9,37 @@
 <meta name="description" content="VEXORA: وكالة رقمية تصمم وتطور المواقع والتطبيقات والمتاجر والأنظمة الرقمية، مع نماذج تجريبية قابلة للعرض قبل اتخاذ القرار.">
 <meta property="og:title" content="VEXORA — حلول رقمية لعصر أذكى">
 <meta property="og:description" content="نصمم ونطور حلولاً رقمية احترافية مع نماذج تجريبية قابلة للعرض.">
+<meta property="og:url" content="https://vex-ora.github.io/Ve/">
+<meta property="og:image" content="https://vex-ora.github.io/Ve/assets/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VEXORA — حلول رقمية لعصر أذكى">
+<meta name="twitter:description" content="وكالة رقمية تصمم وتطور حلولاً رقمية احترافية.">
+<meta name="twitter:image" content="https://vex-ora.github.io/Ve/assets/og-image.svg">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cpath%20d='M10%2010h14l8%2026%208-26h14L36%2054h-8z'%20fill='%237c3aed'/%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0a0b10;--ink:#0e1018;--panel:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));--line:rgba(255,255,255,.08);--violet:#7c3aed;--cyan:#06b6d4;--pink:#db2777;--text:#eef0f8;--muted:#98a0b8;--wa:#25D366;--r:20px}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Cairo',sans-serif;overflow-x:hidden}
-html[lang="en"] body{font-family:'Sora',sans-serif}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1140px;margin:0 auto;padding:0 1.4rem}
-#root[dir="rtl"] .arr{transform:scaleX(-1)}
-.ovl{color:var(--cyan);font-size:.66rem;font-weight:700;letter-spacing:.35em;text-transform:uppercase;display:block;margin-bottom:.8rem}
-h1,h2,h3{line-height:1.3}
-.grad{background:linear-gradient(90deg,var(--cyan),var(--violet) 55%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border:none;border-radius:12px;padding:.85rem 1.6rem;font-weight:700;font-size:.9rem;cursor:pointer;font-family:inherit;transition:.25s}
-.btn.p{background:linear-gradient(90deg,var(--violet),var(--cyan));color:#fff;box-shadow:0 10px 34px rgba(124,58,237,.35)}
-.btn.p:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(6,182,212,.35)}
-.btn.wa{background:var(--wa);color:#052b1c}
-.btn.wa:hover{transform:translateY(-2px)}
-.btn.g{background:transparent;border:1px solid var(--line);color:var(--text)}
-.btn.g:hover{border-color:var(--cyan)}
-.btn.sm{padding:.5rem 1rem;font-size:.76rem;border-radius:10px}
-.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-/* nav */
-nav{position:fixed;top:0;right:0;left:0;z-index:50;background:rgba(10,11,16,.75);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1.4rem;max-width:1140px;margin:0 auto}
-.logo{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:3px;font-size:1.05rem}
-.nav-links{display:flex;gap:1.8rem;font-size:.85rem;color:var(--muted);font-weight:600}
-.nav-links a{transition:.2s}
-.nav-links a:hover{color:var(--text)}
-.nav-r{display:flex;align-items:center;gap:.7rem}
-.lang{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--text);border-radius:99px;padding:.4rem 1rem;cursor:pointer;font-family:inherit;font-weight:700;font-size:.74rem}
-.burger{display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:.3rem}
-.mnav{display:none;flex-direction:column;gap:1rem;padding:1.2rem 1.5rem;border-top:1px solid var(--line);color:var(--muted);font-weight:600}
-/* hero */
-header{position:relative;padding:10rem 0 5rem}
-header::before{content:'';position:absolute;inset:0;background:radial-gradient(52% 44% at 78% 8%,rgba(124,58,237,.2),transparent 70%),radial-gradient(40% 36% at 12% 26%,rgba(6,182,212,.13),transparent 70%)}
-header::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(55% 55% at 50% 32%,#000,transparent)}
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:center;position:relative;z-index:1}
-.hero h1{font-size:clamp(2rem,5.2vw,3.4rem);font-weight:900;margin-bottom:1.2rem}
-.hero p{color:var(--muted);font-size:1.02rem;line-height:2;margin-bottom:2rem;max-width:540px}
-.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap}
-.term{background:#0d0f16;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);font-family:'Sora',monospace;direction:ltr;text-align:left}
-.term .tb{display:flex;align-items:center;gap:.45rem;padding:.7rem 1rem;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
-.term .tb i{width:10px;height:10px;border-radius:50%}
-.term .tb span{margin-left:auto;font-size:.64rem;color:var(--muted)}
-.term .bd{padding:1.3rem 1.4rem;font-size:.76rem;line-height:2.2;color:#c9d2e8}
-.term .g{color:#4ade80}.term .c{color:var(--cyan)}.term .v{color:#c084fc}
-.term .caret{display:inline-block;width:8px;height:14px;background:var(--cyan);vertical-align:middle;animation:bl 1s steps(1) infinite}
-@keyframes bl{50%{opacity:0}}
-.chip{position:absolute;background:rgba(13,15,22,.85);border:1px solid var(--line);backdrop-filter:blur(8px);border-radius:12px;padding:.5rem .9rem;font-size:.68rem;font-weight:700;color:var(--cyan)}
-.chip.a{top:-18px;inset-inline-end:8%;animation:fl 5s ease-in-out infinite}
-.chip.b{bottom:-16px;inset-inline-start:6%;animation:fl 6s ease-in-out infinite reverse;color:var(--pink)}
-@keyframes fl{50%{transform:translateY(-9px)}}
-/* marquee */
-.mq{border-block:1px solid var(--line);overflow:hidden;background:rgba(255,255,255,.015)}
-.mq-in{display:flex;gap:3.2rem;white-space:nowrap;direction:ltr;padding:1rem 0;animation:mq 26s linear infinite;font-family:'Sora';font-size:.78rem;font-weight:700;letter-spacing:.25em;color:var(--muted)}
-.mq-in b{color:var(--cyan)}
-@keyframes mq{to{transform:translateX(-50%)}}
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:-2.6rem;position:relative;z-index:2}
-.stats div{background:var(--ink);padding:1.6rem 1rem;text-align:center}
-.stats b{font-size:1.5rem;font-weight:800;display:block;background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-.stats small{color:var(--muted);font-size:.72rem;font-weight:600}
-/* sections */
-section{padding:6.5rem 0}
-.sec-h{max-width:640px;margin-bottom:3.5rem}
-.sec-h.center{margin-inline:auto;text-align:center}
-.sec-h h2{font-size:clamp(1.5rem,3.6vw,2.3rem);font-weight:900}
-.sec-h p{color:var(--muted);margin-top:.7rem;line-height:1.9}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:1.8rem;transition:.3s;position:relative;overflow:hidden}
-.card:hover{transform:translateY(-6px);border-color:rgba(6,182,212,.35)}
-.card .num{position:absolute;top:1.2rem;inset-inline-end:1.4rem;font-family:'Sora';font-weight:800;font-size:.85rem;color:rgba(255,255,255,.16)}
-.card .ic{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,rgba(124,58,237,.22),rgba(6,182,212,.16));border:1px solid var(--line);color:var(--cyan);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
-.card h3{font-size:1.02rem;margin-bottom:.55rem;font-weight:800}
-.card p{color:var(--muted);font-size:.83rem;line-height:1.9}
-/* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;position:relative}
-.steps::before{content:'';position:absolute;top:26px;right:8%;left:8%;border-top:1px dashed rgba(255,255,255,.14)}
-.step{text-align:center;position:relative;z-index:1}
-.step .n{width:52px;height:52px;margin:0 auto 1.1rem;border-radius:50%;background:var(--ink);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Sora';font-weight:800;color:var(--cyan);box-shadow:0 0 0 6px var(--bg)}
-.step h3{font-size:.95rem;margin-bottom:.4rem}
-.step p{color:var(--muted);font-size:.76rem;line-height:1.8;max-width:210px;margin:0 auto}
-/* work */
-.work{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.proj{background:var(--ink);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
-.proj:hover{transform:translateY(-6px);border-color:rgba(124,58,237,.5);box-shadow:0 24px 60px rgba(0,0,0,.45)}
-.bw{display:flex;align-items:center;gap:.5rem;padding:.6rem .8rem;background:rgba(0,0,0,.4);border-bottom:1px solid var(--line)}
-.bw i{width:9px;height:9px;border-radius:50%;flex-shrink:0}
-.bw .url{flex:1;background:rgba(255,255,255,.05);border-radius:8px;padding:.28rem .7rem;font-size:.6rem;color:var(--muted);direction:ltr;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'Sora'}
-.proj .th{height:130px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.proj .th .mono{font-family:'Sora';font-weight:800;font-size:4.6rem;color:rgba(255,255,255,.14);letter-spacing:-.05em}
-.proj .th .cat{position:absolute;bottom:.8rem;inset-inline-start:.9rem;background:rgba(0,0,0,.4);backdrop-filter:blur(6px);border-radius:99px;padding:.2rem .7rem;font-size:.6rem;font-weight:700;color:#fff}
-.proj .live{position:absolute;top:.8rem;inset-inline-end:.9rem;display:flex;align-items:center;gap:.35rem;background:rgba(0,0,0,.45);border-radius:99px;padding:.2rem .6rem;font-size:.58rem;font-weight:800;color:#4ade80}
-.proj .live i{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:bl 1.4s infinite}.proj .live.demo{color:var(--cyan)}.proj .live.demo i{background:var(--cyan);animation:none}
-.proj .bd{padding:1.4rem;flex:1;display:flex;flex-direction:column}
-.proj h3{font-size:1rem;font-weight:800;margin-bottom:.5rem}
-.proj p{color:var(--muted);font-size:.78rem;line-height:1.85;flex:1}
-.proj .go{margin-top:1.1rem;display:inline-flex;align-items:center;gap:.5rem;color:var(--cyan);font-size:.8rem;font-weight:800}
-.proj .go:hover{text-decoration:underline}
-/* guarantee + offer */
-.g2{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
-.chk{display:flex;flex-direction:column;gap:1rem;margin-top:1.6rem}
-.chk div{display:flex;gap:.8rem;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem}
-.chk .ci{width:26px;height:26px;border-radius:8px;background:rgba(74,222,128,.12);color:#4ade80;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
-.chk b{font-size:.88rem;display:block;margin-bottom:.15rem}
-.chk small{color:var(--muted);font-size:.74rem;line-height:1.7}
-.offer{background:linear-gradient(150deg,rgba(124,58,237,.18),rgba(219,39,119,.12));border:1px solid rgba(124,58,237,.4);border-radius:24px;padding:2.6rem;text-align:center}
-.offer .pct{font-family:'Sora';font-weight:800;font-size:3rem;background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-.offer h3{font-size:1.25rem;margin:.6rem 0}
-.offer p{color:var(--muted);font-size:.86rem;margin-bottom:1.6rem;line-height:1.9}
-/* faq */
-.faq{max-width:780px;margin:0 auto}
-details{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.15rem 1.5rem;margin-bottom:.8rem;transition:.2s}
-details[open]{border-color:rgba(6,182,212,.35)}
-summary{cursor:pointer;font-weight:800;font-size:.92rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
-summary .pl{color:var(--cyan);font-size:1.2rem;font-weight:400;transition:.2s}
-details[open] summary .pl{transform:rotate(45deg)}
-details p{color:var(--muted);font-size:.83rem;line-height:2;margin-top:.8rem}
-/* contact */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-.cinfo .num{font-family:'Sora';font-weight:800;font-size:1.3rem;direction:ltr;display:block;margin:1.4rem 0;color:var(--cyan)}
-.cform{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:2rem;display:flex;flex-direction:column;gap:1rem}
-.cform input,.cform select,.cform textarea{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:.85rem 1.1rem;color:var(--text);font-family:inherit;font-size:.88rem;width:100%}
-.cform :is(input,textarea):focus{outline:none;border-color:var(--cyan)}
-.cform select option{background:var(--ink)}
-/* footer */
-footer{border-top:1px solid var(--line);padding:3.5rem 0 2rem;background:var(--ink)}
-.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
-.fgrid h4{font-size:.85rem;margin-bottom:1rem;color:var(--text)}
-.fgrid a{display:block;color:var(--muted);font-size:.78rem;margin-bottom:.6rem}
-.fgrid a:hover{color:var(--cyan)}
-.fgrid p{color:var(--muted);font-size:.78rem;line-height:1.9;margin-top:.8rem}
-.fbot{border-top:1px solid var(--line);padding-top:1.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.72rem}
-.wa-float{position:fixed;bottom:1.3rem;inset-inline-end:1.3rem;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(37,211,102,.45);transition:.2s}
-.wa-float:hover{transform:scale(1.07)}
-@media(max-width:960px){.hero{grid-template-columns:1fr}.term{display:none}.grid3,.work{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr;gap:2rem}.steps::before{display:none}.stats{grid-template-columns:1fr 1fr}.g2,.contact{grid-template-columns:1fr}.nav-links{display:none}.burger{display:block}.mnav.open{display:flex}.fgrid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.grid3,.work,.steps,.fgrid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
-
-/* responsive polish and accessibility */
-html{scroll-padding-top:5.5rem}
-body{min-width:320px;line-height:1.5}
-img,svg{max-width:100%}
-:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
-.nav-in{min-height:64px}
-.mnav a{padding:.25rem 0;transition:color .2s,transform .2s}
-.mnav a:hover{color:var(--text);transform:translateX(-3px)}
-.proj .th .mono{max-width:90%;font-size:clamp(2rem,11vw,4.6rem);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
-.cform input,.cform select,.cform textarea{min-height:48px}
-.cform textarea{resize:vertical}
-.cform :is(input,select,textarea):focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(6,182,212,.12)}
-@media(max-width:960px){header{padding-top:8.5rem}.nav-in{padding-inline:1rem}}
-@media(max-width:600px){section{padding:4.5rem 0}.wrap{padding-inline:1rem}.hero{gap:2rem}.hero h1{font-size:clamp(1.85rem,9vw,2.5rem)}.hero p{font-size:.92rem;line-height:1.9}.hero-btns{display:grid;grid-template-columns:1fr;width:100%}.hero-btns .btn{width:100%}.stats div{padding:.95rem .5rem}.stats b{font-size:1.2rem}.stats small{display:block;font-size:.65rem;line-height:1.45}.card,.offer{padding:1.35rem}.contact{gap:2rem}.cform{padding:1.25rem}.fbot{justify-content:center;text-align:center}.fbot span{width:100%}.nav-r{gap:.4rem}.nav-r .btn.sm{display:none}.lang{padding-inline:.7rem}.logo{font-size:.9rem;letter-spacing:2px}}
-@media(max-width:380px){.stats{grid-template-columns:1fr}.stats div{padding:1rem}.hero h1{font-size:1.8rem}.nav-in{padding-inline:.8rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-</style>
+<link rel="stylesheet" href="assets/styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-<body>
-<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="vx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
+<body id="top">
+<svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs><linearGradient id="vx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg>
 
 <nav aria-label="التنقل الرئيسي"><div class="nav-in">
- <a class="logo" href="#"><svg width="28" height="28" viewBox="0 0 64 64"><path d="M10 10h14l8 26 8-26h14L36 54h-8z" fill="url(#vx)"/><ellipse cx="32" cy="34" rx="26" ry="8" fill="none" stroke="#db2777" stroke-width="2.5" transform="rotate(-16 32 34)"/></svg><span style="direction:ltr">VEXORA</span></a>
- <div class="nav-links"><a href="#services" data-t="n1"></a><a href="#process" data-t="n2"></a><a href="#work" data-t="n3"></a><a href="#faq" data-t="n4"></a><a href="#contact" data-t="n5"></a></div>
- <div class="nav-r"><button type="button" class="lang" id="langBtn" aria-label="تغيير اللغة" onclick="setLang(cur==='ar'?'en':'ar')">EN</button><a class="btn p sm" href="#contact" data-t="n6"></a>
- <button type="button" class="burger" aria-label="فتح قائمة التنقل" aria-controls="mnav" aria-expanded="false" onclick="toggleMenu(this)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
+ <a class="logo" href="#top"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 64 64"><path d="M10 10h14l8 26 8-26h14L36 54h-8z" fill="url(#vx)"/><ellipse cx="32" cy="34" rx="26" ry="8" fill="none" stroke="#db2777" stroke-width="2.5" transform="rotate(-16 32 34)"/></svg><span style="direction:ltr">VEXORA</span></a>
+ <div class="nav-links"><a href="#services" data-t="n1">الخدمات</a><a href="#process" data-t="n2">طريقة العمل</a><a href="#work" data-t="n3">نماذجنا</a><a href="#faq" data-t="n4">أسئلة شائعة</a><a href="#contact" data-t="n5">تواصل</a></div>
+ <div class="nav-r"><button type="button" class="lang" id="langBtn" data-aria="langLabel" aria-label="تغيير اللغة">EN</button><a class="btn p sm" href="#contact" data-t="n6">اطلب عرض سعر</a>
+ <button type="button" class="burger" data-aria="menuLabel" aria-label="فتح قائمة التنقل" aria-controls="mnav" aria-expanded="false"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
 </div>
-<div class="mnav" id="mnav"><a onclick="closeMenu()" href="#services" data-t="n1"></a><a onclick="closeMenu()" href="#process" data-t="n2"></a><a onclick="closeMenu()" href="#work" data-t="n3"></a><a onclick="closeMenu()" href="#faq" data-t="n4"></a><a onclick="closeMenu()" href="#contact" data-t="n5"></a></div></nav>
+<div class="mnav" id="mnav"><a href="#services" data-t="n1">الخدمات</a><a href="#process" data-t="n2">طريقة العمل</a><a href="#work" data-t="n3">نماذجنا</a><a href="#faq" data-t="n4">أسئلة شائعة</a><a href="#contact" data-t="n5">تواصل</a></div></nav>
 
 <header><div class="wrap hero">
  <div>
-  <span class="ovl" data-t="ho"></span>
-  <h1><span data-t="h1a"></span><br><span class="grad" data-t="h1b"></span></h1>
-  <p data-t="hs"></p>
-  <div class="hero-btns"><a class="btn wa" id="waTop" href="#" target="_blank" rel="noopener noreferrer"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 .9c.3.2.5.2.6.4 0 .1 0 .8-.2 1.4z"/></svg><span data-t="hc1"></span></a><a class="btn g" href="#work"><span data-t="hc2"></span><svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div>
+  <span class="ovl" data-t="ho">وكالة رقمية عالمية</span>
+  <h1><span data-t="h1a">المستقبل الرقمي</span><br><span class="grad" data-t="h1b">يبدأ من هنا</span></h1>
+  <p data-t="hs">نصمم ونطور مواقع وتطبيقات ومتاجر إلكترونية وأنظمة إدارة لعملائنا حول العالم. استكشف نماذجنا التجريبية وتعرّف على جودة التنفيذ قبل أن تبدأ مشروعك.</p>
+  <div class="hero-btns"><a class="btn wa" id="waTop" href="#top" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 .9c.3.2.5.2.6.4 0 .1 0 .8-.2 1.4z"/></svg><span data-t="hc1">ابدأ مشروعك على واتساب</span></a><a class="btn g" href="#work"><span data-t="hc2">شاهد نماذجنا التجريبية</span><svg aria-hidden="true" class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div>
  </div>
  <div style="position:relative">
   <span class="chip a">Android • iOS • Web</span>
@@ -199,166 +52,101 @@ img,svg{max-width:100%}
 <div class="mq"><div class="mq-in" id="mq"><span>WEB <b>•</b> MOBILE APPS <b>•</b> E-COMMERCE <b>•</b> UI/UX <b>•</b> SEO <b>•</b> SAAS DASHBOARDS <b>•</b> STREAMING <b>•</b> AI SOLUTIONS <b>•</b>&nbsp;</span></div></div>
 
 <div class="wrap"><div class="stats rv">
- <div><b>+8</b><small data-t="t1"></small></div>
- <div><b>24/7</b><small data-t="t2"></small></div>
- <div><b>48h</b><small data-t="t3"></small></div>
- <div><b>100%</b><small data-t="t4"></small></div>
+ <div><b>+8</b><small data-t="t1">10 نماذج تجريبية</small></div>
+ <div><b>24/7</b><small data-t="t2">دعم ومتابعة</small></div>
+ <div><b>48h</b><small data-t="t3">رد على طلبك</small></div>
+ <div><b>100%</b><small data-t="t4">التزام بالمواعيد</small></div>
 </div></div>
 
 <section id="services"><div class="wrap">
- <div class="sec-h center rv"><span class="ovl" data-t="so"></span><h2 data-t="st"></h2><p data-t="ss"></p></div>
+ <div class="sec-h center rv"><span class="ovl" data-t="so">خدماتنا</span><h2 data-t="st">كل ما تحتاجه لنجاحك الرقمي</h2><p data-t="ss">ست خدمات متكاملة تحت سقف واحد، بجودة عالمية وأسعار واضحة.</p></div>
  <div class="grid3">
-  <div class="card rv"><span class="num">01</span><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3 data-t="s1t"></h3><p data-t="s1d"></p></div>
-  <div class="card rv"><span class="num">02</span><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h3 data-t="s2t"></h3><p data-t="s2d"></p></div>
-  <div class="card rv"><span class="num">03</span><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><h3 data-t="s3t"></h3><p data-t="s3d"></p></div>
-  <div class="card rv"><span class="num">04</span><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div><h3 data-t="s4t"></h3><p data-t="s4d"></p></div>
-  <div class="card rv"><span class="num">05</span><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="12" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3 data-t="s5t"></h3><p data-t="s5d"></p></div>
-  <div class="card rv"><span class="num">06</span><div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-t="s6t"></h3><p data-t="s6d"></p></div>
+  <div class="card rv"><span class="num">01</span><div class="ic"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3 data-t="s1t">مواقع إلكترونية احترافية</h3><p data-t="s1d">مواقع سريعة وآمنة متوافقة مع جميع الأجهزة ومحركات البحث.</p></div>
+  <div class="card rv"><span class="num">02</span><div class="ic"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h3 data-t="s2t">تطبيقات Android و iOS</h3><p data-t="s2d">تطبيقات ذكية بتجربة استخدام عصرية وأداء عالٍ.</p></div>
+  <div class="card rv"><span class="num">03</span><div class="ic"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><h3 data-t="s3t">متاجر إلكترونية</h3><p data-t="s3d">متاجر كاملة: دفع، طلبات، مخزون وتتبع — جاهزة للبيع من اليوم الأول.</p></div>
+  <div class="card rv"><span class="num">04</span><div class="ic"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div><h3 data-t="s4t">تصميم UI/UX</h3><p data-t="s4d">هوية بصرية وتجربة استخدام تميّزك عن منافسيك.</p></div>
+  <div class="card rv"><span class="num">05</span><div class="ic"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="12" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3 data-t="s5t">أنظمة إدارة مخصصة</h3><p data-t="s5d">لوحات تحكم للمشتركين والفواتير والتحصيل واللوجستيك حسب نشاطك.</p></div>
+  <div class="card rv"><span class="num">06</span><div class="ic"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-t="s6t">دعم وصيانة</h3><p data-t="s6d">تحديثات ومراقبة ودعم مستمر بعد الإطلاق — لا نختفي بعد التسليم.</p></div>
  </div>
 </div></section>
 
 <section id="process" style="background:rgba(255,255,255,.015);border-block:1px solid var(--line)"><div class="wrap">
- <div class="sec-h center rv"><span class="ovl" data-t="po"></span><h2 data-t="pt"></h2></div>
+ <div class="sec-h center rv"><span class="ovl" data-t="po">منهجيتنا</span><h2 data-t="pt">أربع خطوات من الفكرة إلى الإطلاق</h2></div>
  <div class="steps">
-  <div class="step rv"><div class="n">1</div><h3 data-t="p1t"></h3><p data-t="p1d"></p></div>
-  <div class="step rv"><div class="n">2</div><h3 data-t="p2t"></h3><p data-t="p2d"></p></div>
-  <div class="step rv"><div class="n">3</div><h3 data-t="p3t"></h3><p data-t="p3d"></p></div>
-  <div class="step rv"><div class="n">4</div><h3 data-t="p4t"></h3><p data-t="p4d"></p></div>
+  <div class="step rv"><div class="n">1</div><h3 data-t="p1t">نقاش مجاني</h3><p data-t="p1d">نفهم فكرتك ومتطلباتك بدون أي التزام.</p></div>
+  <div class="step rv"><div class="n">2</div><h3 data-t="p2t">عرض سعر شفاف</h3><p data-t="p2d">ثمن ومدة محدّدان كتابةً قبل البدء.</p></div>
+  <div class="step rv"><div class="n">3</div><h3 data-t="p3t">تنفيذ ومعاينات</h3><p data-t="p3d">تصميم وتطوير تتابعه خطوة بخطوة عبر معاينات مستمرة.</p></div>
+  <div class="step rv"><div class="n">4</div><h3 data-t="p4t">إطلاق ودعم</h3><p data-t="p4d">نشر وتدريب ودعم مستمر بعد التسليم.</p></div>
  </div>
 </div></section>
 
 <section id="work"><div class="wrap">
- <div class="sec-h center rv"><span class="ovl" data-t="wo"></span><h2 data-t="wt"></h2><p data-t="ws"></p></div>
+ <div class="sec-h center rv"><span class="ovl" data-t="wo">معرض النماذج</span><h2 data-t="wt">نماذج تجريبية — استكشفها بنفسك</h2><p data-t="ws">مجموعة من النماذج التجريبية التي توضح أسلوبنا في التصميم والتطوير. افتح أي نموذج للتعرف على التجربة.</p></div>
   <div class="work">
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/TEO-STORE/</span></div><div class="th" style="background:linear-gradient(135deg,#312e81,#7c3aed)"><span class="mono">TEO</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w1g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">TEO STORE</h3><p data-t="w1"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/TEO-STORE/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#312e81,#7c3aed)"><img class="project-logo" src="assets/logos/teo-store.svg" alt="TEO logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w1g">متجر إلكتروني</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">TEO STORE</h3><p data-t="w1">متجر إلكتروني عصري للمنتجات والخدمات الرقمية مع تجربة تصفح واضحة.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/TEO-STORE/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
 
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/Shgps.ma/</span></div><div class="th" style="background:linear-gradient(135deg,#134e4a,#14b8a6)"><span class="mono">SHGPS</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w2g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">SHGPS.MA</h3><p data-t="w2"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Shgps.ma/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#134e4a,#14b8a6)"><img class="project-logo" src="assets/logos/shgps.svg" alt="SHGPS logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w2g">منصة خدمات</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">SHGPS.MA</h3><p data-t="w2">نموذج منصة خدمات محلية بهوية واضحة وتجربة استخدام عملية.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Shgps.ma/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
 
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/atheer-parfums/</span></div><div class="th" style="background:linear-gradient(135deg,#78350f,#d97706)"><span class="mono">ATHEER</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w3g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">ATHEER PARFUMS</h3><p data-t="w3"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/atheer-parfums/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#78350f,#d97706)"><img class="project-logo" src="assets/logos/atheer-parfums.svg" alt="ATHEER logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w3g">متجر فاخر</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">ATHEER PARFUMS</h3><p data-t="w3">متجر عطور فاخر يركز على العرض البصري وتفاصيل المنتج.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/atheer-parfums/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
 
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/IRRI10/</span></div><div class="th" style="background:linear-gradient(135deg,#1e3a8a,#3b82f6)"><span class="mono">IRRI10</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w4g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">IRRI10</h3><p data-t="w4"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/IRRI10/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#1e3a8a,#3b82f6)"><img class="project-logo" src="assets/logos/irri10.svg" alt="IRRI10 logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w4g">تجربة رقمية</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">IRRI10</h3><p data-t="w4">نموذج رقمي بواجهة مرنة وحضور بصري قوي لمشروع معاصر.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/IRRI10/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
 
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/Super/</span></div><div class="th" style="background:linear-gradient(135deg,#581c87,#a855f7)"><span class="mono">SUPER</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w5g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">SUPER</h3><p data-t="w5"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Super/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#581c87,#a855f7)"><img class="project-logo" src="assets/logos/super.svg" alt="SUPER logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w5g">واجهة تفاعلية</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">SUPER</h3><p data-t="w5">نموذج واجهة تفاعلية بطابع حيوي ومسارات استخدام مباشرة.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Super/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
 
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/my-sindbad/</span></div><div class="th" style="background:linear-gradient(135deg,#0b2239,#0e7490)"><span class="mono">SINDBAD</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w6g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">MY SINDBAD</h3><p data-t="w6"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/my-sindbad/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#0b2239,#0e7490)"><img class="project-logo" src="assets/logos/my-sindbad.svg" alt="SINDBAD logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w6g">تطبيق سفر</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">MY SINDBAD</h3><p data-t="w6">مساعد سفر ذكي يقدّم تجربة منظمة لاستكشاف الخيارات والرحلات.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/my-sindbad/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
 
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/Smart-Product/</span></div><div class="th" style="background:linear-gradient(135deg,#14532d,#16a34a)"><span class="mono">SMART</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w7g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">SMART PRODUCT</h3><p data-t="w7"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Smart-Product/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#14532d,#16a34a)"><img class="project-logo" src="assets/logos/smart-product.svg" alt="SMART logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w7g">متجر منتجات</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">SMART PRODUCT</h3><p data-t="w7">نموذج متجر منتجات احترافي مع كتالوج مرتب وتجربة شراء سلسة.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/Smart-Product/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
 
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/LOOMO/</span></div><div class="th" style="background:linear-gradient(135deg,#164e63,#0891b2)"><span class="mono">LOOMO</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w8g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">LOOMO</h3><p data-t="w8"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/LOOMO/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#164e63,#0891b2)"><img class="project-logo" src="assets/logos/loomo.svg" alt="LOOMO logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w8g">علامة رقمية</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">LOOMO</h3><p data-t="w8">نموذج علامة رقمية مرنة يجمع بين البساطة والحضور المميز.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/LOOMO/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
 
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/SPLICE/</span></div><div class="th" style="background:linear-gradient(135deg,#831843,#db2777)"><span class="mono">SPLICE</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w9g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">SPLICE</h3><p data-t="w9"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/SPLICE/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#831843,#db2777)"><img class="project-logo" src="assets/logos/splice.svg" alt="SPLICE logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w9g">منصة اجتماعية</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">SPLICE</h3><p data-t="w9">تجربة بث وتواصل اجتماعي بواجهة غنية بالتفاصيل والتفاعل.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/SPLICE/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
 
-   <div class="proj rv"><div class="bw"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">alanshahd82-dotcom.github.io/starbucks-store/</span></div><div class="th" style="background:linear-gradient(135deg,#064e3b,#10b981)"><span class="mono">STARBUCKS</span><span class="live demo"><i></i><span data-t="demoBadge"></span></span><span class="cat" data-t="w10g"></span></div><div class="bd"><h3 style="direction:ltr;text-align:start">STARBUCKS STORE</h3><p data-t="w10"></p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/starbucks-store/"><span data-t="wl"></span><svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
+   <div class="proj rv"><div class="th" style="background:linear-gradient(135deg,#064e3b,#10b981)"><img class="project-logo" src="assets/logos/starbucks-store.svg" alt="STARBUCKS logo" loading="lazy" width="220" height="100"><span class="live demo"><i></i><span data-t="demoBadge">نموذج تجريبي</span></span><span class="cat" data-t="w10g">تجربة متجر</span></div><div class="bd"><h3 style="direction:ltr;text-align:start">STARBUCKS STORE</h3><p data-t="w10">نموذج متجر مستوحى من تجربة المقاهي والعلامات الاستهلاكية العالمية.</p><a class="go" target="_blank" rel="noopener noreferrer" href="https://alanshahd82-dotcom.github.io/starbucks-store/"><span data-t="wl">عرض النموذج</span><svg aria-hidden="true" class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></a></div></div>
   </div></div></section>
 
 <section><div class="wrap g2">
- <div class="rv"><span class="ovl" data-t="go"></span><h2 style="font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:900" data-t="gt"></h2>
+ <div class="rv"><span class="ovl" data-t="go">لماذا نحن</span><h2 style="font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:900" data-t="gt">ضمانات مكتوبة، لا وعود كلامية</h2>
   <div class="chk">
-   <div><span class="ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span><b data-t="g1t"></b><small data-t="g1d"></small></span></div>
-   <div><span class="ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span><b data-t="g2t"></b><small data-t="g2d"></small></span></div>
-   <div><span class="ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span><b data-t="g3t"></b><small data-t="g3d"></small></span></div>
+   <div><span class="ci"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span><b data-t="g1t">تعديلات حتى الرضا التام</b><small data-t="g1d">لا نسلّم المشروع إلا وأنت راضٍ عنه 100%.</small></span></div>
+   <div><span class="ci"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span><b data-t="g2t">سرية تامة</b><small data-t="g2d">فكرتك وبياناتك وعملاؤك ملكك وحدك.</small></span></div>
+   <div><span class="ci"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span><span><b data-t="g3t">دعم بعد التسليم</b><small data-t="g3d">فترة دعم مجانية ثم باقات صيانة اختيارية.</small></span></div>
   </div>
  </div>
- <div class="offer rv"><div class="pct">-50%</div><h3 data-t="ot"></h3><p data-t="os"></p><a class="btn wa" id="waOffer" href="#" target="_blank" rel="noopener noreferrer" data-t="oc"></a></div>
+ <div class="offer rv"><div class="pct">-50%</div><h3 data-t="ot">عرض الإطلاق: لأول 3 عملاء فقط</h3><p data-t="os">نبني علاقات طويلة الأمد — احجز مكانك قبل انتهاء العرض.</p><a class="btn wa" id="waOffer" href="#top" target="_blank" rel="noopener noreferrer" data-t="oc">احجز العرض على واتساب</a></div>
 </div></section>
 
 <section id="faq" style="background:rgba(255,255,255,.015);border-block:1px solid var(--line)"><div class="wrap">
- <div class="sec-h center rv"><span class="ovl">FAQ</span><h2 data-t="ft"></h2></div>
+ <div class="sec-h center rv"><span class="ovl">FAQ</span><h2 data-t="ft">أسئلة شائعة</h2></div>
  <div class="faq">
-  <details class="rv"><summary><span data-t="f1q"></span><span class="pl">+</span></summary><p data-t="f1a"></p></details>
-  <details class="rv"><summary><span data-t="f2q"></span><span class="pl">+</span></summary><p data-t="f2a"></p></details>
-  <details class="rv"><summary><span data-t="f3q"></span><span class="pl">+</span></summary><p data-t="f3a"></p></details>
-  <details class="rv"><summary><span data-t="f4q"></span><span class="pl">+</span></summary><p data-t="f4a"></p></details>
+  <details class="rv"><summary><span data-t="f1q">كم يستغرق تنفيذ مشروعي؟</span><span class="pl">+</span></summary><p data-t="f1a">حسب النطاق: الموقع 3–7 أيام، المتجر 1–3 أسابيع، التطبيق 2–6 أسابيع. المدة تُكتب وتُلتزم في عرض السعر.</p></details>
+  <details class="rv"><summary><span data-t="f2q">كيف تتم الدفعات؟</span><span class="pl">+</span></summary><p data-t="f2a">دفعة عند البدء ودفعة عند التسليم، عبر الحساب البنكي للشركة أو PayPal أو البطاقة.</p></details>
+  <details class="rv"><summary><span data-t="f3q">هل أدفع تكلفة استضافة أو دومين؟</span><span class="pl">+</span></summary><p data-t="f3a">نطلق مشروعك أولاً على استضافة مجانية سريعة، وتربط دومين باسمك متى شئت لاحقاً.</p></details>
+  <details class="rv"><summary><span data-t="f4q">أين يُنشر مشروعي ومن يملكه؟</span><span class="pl">+</span></summary><p data-t="f4a">يُنشر باسمك وعلى حساباتك، وتسلم كل الشيفرات والتصاميم — الملكية لك بالكامل.</p></details>
  </div>
 </div></section>
 
 <section id="contact"><div class="wrap contact">
- <div class="cinfo rv"><span class="ovl" data-t="co"></span><h2 style="font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:900" data-t="ct"></h2><p style="color:var(--muted);line-height:2;margin-top:.8rem" data-t="cs"></p>
+ <div class="cinfo rv"><span class="ovl" data-t="co">تواصل معنا</span><h2 style="font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:900" data-t="ct">لنبنِ مشروعك القادم</h2><p style="color:var(--muted);line-height:2;margin-top:.8rem" data-t="cs">أرسل فكرتك الآن وستصلك دراسة أولية وعرض سعر واضح خلال 48 ساعة — بدون أي التزام.</p>
   <span class="num">+212 778-878-421</span>
-  <a class="btn wa" id="waBig" href="#" target="_blank" rel="noopener noreferrer"><span data-t="hc1"></span></a></div>
- <form class="cform rv" onsubmit="sendWa(event)">
-  <input id="cName" type="text" autocomplete="name" required aria-label="الاسم" data-tp="fn">
-  <select id="cServ" aria-label="الخدمة المطلوبة"><option data-t="o1"></option><option data-t="o2"></option><option data-t="o3"></option><option data-t="o4"></option><option data-t="o5"></option></select>
-  <textarea id="cMsg" rows="4" required aria-label="تفاصيل المشروع" data-tp="fm"></textarea>
-  <button class="btn p" type="submit" style="width:100%" data-t="fs"></button>
+  <a class="btn wa" id="waBig" href="#top" target="_blank" rel="noopener noreferrer"><span data-t="hc1">ابدأ مشروعك على واتساب</span></a></div>
+ <form class="cform" id="contactForm">
+  <div class="field"><label for="cName" data-t="fnl">الاسم الكامل</label><input id="cName" type="text" autocomplete="name" required placeholder="اسمك الكريم" data-tp="fn"></div>
+  <div class="field"><label for="cServ" data-t="sl">الخدمة المطلوبة</label><select id="cServ"><option value="website" data-t="o1">موقع إلكتروني</option><option value="mobile-app" data-t="o2">تطبيق موبايل</option><option value="ecommerce" data-t="o3">متجر إلكتروني</option><option value="business-system" data-t="o4">نظام إدارة / لوحة تحكم</option><option value="other" data-t="o5">خدمة أخرى</option></select></div>
+  <div class="field"><label for="cMsg" data-t="ml">تفاصيل المشروع</label><textarea id="cMsg" rows="4" required placeholder="حدّثنا عن فكرتك أو مشروعك..." data-tp="fm"></textarea></div>
+  <button class="btn p" type="submit" style="width:100%" data-t="fs">إرسال الطلب عبر واتساب</button>
  </form>
 </div></section>
 
 <footer><div class="wrap">
  <div class="fgrid">
-  <div><a class="logo" href="#"><svg width="26" height="26" viewBox="0 0 64 64"><path d="M10 10h14l8 26 8-26h14L36 54h-8z" fill="url(#vx)"/></svg><span style="direction:ltr">VEXORA</span></a><p data-t="fr1"></p></div>
-  <div><h4 data-t="fr2"></h4><a href="#services" data-t="n1"></a><a href="#work" data-t="n3"></a><a href="#process" data-t="n2"></a><a href="#contact" data-t="n5"></a></div>
-  <div><h4 data-t="fr3"></h4><a href="#services" data-t="s1t"></a><a href="#services" data-t="s2t"></a><a href="#services" data-t="s3t"></a><a href="#services" data-t="s5t"></a></div>
+  <div><a class="logo" href="#top"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 64 64"><path d="M10 10h14l8 26 8-26h14L36 54h-8z" fill="url(#vx)"/></svg><span style="direction:ltr">VEXORA</span></a><p data-t="fr1">وكالة رقمية مستقلة نصمم ونطور حلولاً عالمية: مواقع، تطبيقات، متاجر وأنظمة إدارة — بجودة عالية والتزام كامل.</p></div>
+  <div><h4 data-t="fr2">روابط سريعة</h4><a href="#services" data-t="n1">الخدمات</a><a href="#work" data-t="n3">نماذجنا</a><a href="#process" data-t="n2">طريقة العمل</a><a href="#contact" data-t="n5">تواصل</a></div>
+  <div><h4 data-t="fr3">خدماتنا</h4><a href="#services" data-t="s1t">مواقع إلكترونية احترافية</a><a href="#services" data-t="s2t">تطبيقات Android و iOS</a><a href="#services" data-t="s3t">متاجر إلكترونية</a><a href="#services" data-t="s5t">أنظمة إدارة مخصصة</a></div>
  </div>
- <div class="fbot"><span>© 2026 VEXORA — <span data-t="fr4"></span></span><span style="direction:ltr">Digital Solutions for a Smarter Tomorrow</span></div>
+ <div class="fbot"><span>© 2026 VEXORA — <span data-t="fr4">جميع الحقوق محفوظة</span></span><span style="direction:ltr">Digital Solutions for a Smarter Tomorrow</span></div>
 </div></footer>
-<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener noreferrer"><svg width="26" height="26" viewBox="0 0 24 24" fill="#052b1c"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 .9c.3.2.5.2.6.4 0 .1 0 .8-.2 1.4z"/></svg></a>
+<a class="wa-float" id="waFloat" data-aria="waLabel" aria-label="تواصل معنا عبر واتساب" href="#top" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="#052b1c"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1s1.7.8 2 .9c.3.2.5.2.6.4 0 .1 0 .8-.2 1.4z"/></svg></a>
 
-<script>
-const WA='212778878421';
-const T={
-n1:{ar:'الخدمات',en:'Services'},n2:{ar:'طريقة العمل',en:'Process'},n3:{ar:'نماذجنا',en:'Demos'},n4:{ar:'أسئلة شائعة',en:'FAQ'},n5:{ar:'تواصل',en:'Contact'},n6:{ar:'اطلب عرض سعر',en:'Get a Quote'},
-ho:{ar:'وكالة رقمية عالمية',en:'Global Digital Agency'},
-h1a:{ar:'المستقبل الرقمي',en:'Your Digital Future'},h1b:{ar:'يبدأ من هنا',en:'Starts Here'},
-hs:{ar:'نصمم ونطور مواقع وتطبيقات ومتاجر إلكترونية وأنظمة إدارة لعملائنا حول العالم. استكشف نماذجنا التجريبية وتعرّف على جودة التنفيذ قبل أن تبدأ مشروعك.',en:'We design & develop websites, apps, e-commerce stores and business systems for clients worldwide. Explore our demo projects and see the quality before you start.'},
-hc1:{ar:'ابدأ مشروعك على واتساب',en:'Start on WhatsApp'},hc2:{ar:'شاهد نماذجنا التجريبية',en:'View Demo Projects'},
-t1:{ar:'10 نماذج تجريبية',en:'10 demo projects'},t2:{ar:'دعم ومتابعة',en:'Support & follow-up'},t3:{ar:'رد على طلبك',en:'Reply to your request'},t4:{ar:'التزام بالمواعيد',en:'Deadline commitment'},
-so:{ar:'خدماتنا',en:'Services'},st:{ar:'كل ما تحتاجه لنجاحك الرقمي',en:'Everything Your Business Needs'},ss:{ar:'ست خدمات متكاملة تحت سقف واحد، بجودة عالمية وأسعار واضحة.',en:'Six integrated services under one roof — global quality, clear pricing.'},
-s1t:{ar:'مواقع إلكترونية احترافية',en:'Professional Websites'},s1d:{ar:'مواقع سريعة وآمنة متوافقة مع جميع الأجهزة ومحركات البحث.',en:'Fast, secure, SEO-ready websites for every device.'},
-s2t:{ar:'تطبيقات Android و iOS',en:'Android & iOS Apps'},s2d:{ar:'تطبيقات ذكية بتجربة استخدام عصرية وأداء عالٍ.',en:'Smart apps with modern UX and high performance.'},
-s3t:{ar:'متاجر إلكترونية',en:'E-Commerce Stores'},s3d:{ar:'متاجر كاملة: دفع، طلبات، مخزون وتتبع — جاهزة للبيع من اليوم الأول.',en:'Complete stores: payments, orders, inventory & tracking.'},
-s4t:{ar:'تصميم UI/UX',en:'UI/UX Design'},s4d:{ar:'هوية بصرية وتجربة استخدام تميّزك عن منافسيك.',en:'Visual identity & UX that set you apart.'},
-s5t:{ar:'أنظمة إدارة مخصصة',en:'Custom Business Systems'},s5d:{ar:'لوحات تحكم للمشتركين والفواتير والتحصيل واللوجستيك حسب نشاطك.',en:'Dashboards for subscribers, billing, collections & logistics.'},
-s6t:{ar:'دعم وصيانة',en:'Support & Maintenance'},s6d:{ar:'تحديثات ومراقبة ودعم مستمر بعد الإطلاق — لا نختفي بعد التسليم.',en:'Updates, monitoring & support after launch — we stay with you.'},
-po:{ar:'منهجيتنا',en:'Method'},pt:{ar:'أربع خطوات من الفكرة إلى الإطلاق',en:'Four Steps From Idea to Launch'},
-p1t:{ar:'نقاش مجاني',en:'Free Consultation'},p1d:{ar:'نفهم فكرتك ومتطلباتك بدون أي التزام.',en:'We understand your idea — no commitment.'},
-p2t:{ar:'عرض سعر شفاف',en:'Transparent Quote'},p2d:{ar:'ثمن ومدة محدّدان كتابةً قبل البدء.',en:'Fixed price & timeline in writing.'},
-p3t:{ar:'تنفيذ ومعاينات',en:'Build & Previews'},p3d:{ar:'تصميم وتطوير تتابعه خطوة بخطوة عبر معاينات مستمرة.',en:'Design & development with ongoing previews.'},
-p4t:{ar:'إطلاق ودعم',en:'Launch & Support'},p4d:{ar:'نشر وتدريب ودعم مستمر بعد التسليم.',en:'Deployment, training & ongoing support.'},
-wo:{ar:'معرض النماذج',en:'Demo Portfolio'},wt:{ar:'نماذج تجريبية — استكشفها بنفسك',en:'Demo Projects — Explore Them Yourself'},ws:{ar:'مجموعة من النماذج التجريبية التي توضح أسلوبنا في التصميم والتطوير. افتح أي نموذج للتعرف على التجربة.',en:'A collection of demo projects that shows our approach to design and development. Open any demo to explore the experience.'},
-wl:{ar:'عرض النموذج',en:'View Demo'},demoBadge:{ar:'نموذج تجريبي',en:'DEMO'},
-w1:{ar:'متجر إلكتروني عصري للمنتجات والخدمات الرقمية مع تجربة تصفح واضحة.',en:'A modern e-commerce concept for digital products and services with a clear browsing experience.'},w1g:{ar:'متجر إلكتروني',en:'E-Commerce'},w2:{ar:'نموذج منصة خدمات محلية بهوية واضحة وتجربة استخدام عملية.',en:'A local-services platform concept with a clear identity and practical user experience.'},w2g:{ar:'منصة خدمات',en:'Services Platform'},w3:{ar:'متجر عطور فاخر يركز على العرض البصري وتفاصيل المنتج.',en:'A luxury perfume store concept focused on visual presentation and product detail.'},w3g:{ar:'متجر فاخر',en:'Luxury Store'},w4:{ar:'نموذج رقمي بواجهة مرنة وحضور بصري قوي لمشروع معاصر.',en:'A flexible digital concept with a strong visual presence for a modern project.'},w4g:{ar:'تجربة رقمية',en:'Digital Experience'},w5:{ar:'نموذج واجهة تفاعلية بطابع حيوي ومسارات استخدام مباشرة.',en:'An interactive interface concept with an energetic feel and direct user journeys.'},w5g:{ar:'واجهة تفاعلية',en:'Interactive UI'},w6:{ar:'مساعد سفر ذكي يقدّم تجربة منظمة لاستكشاف الخيارات والرحلات.',en:'A smart travel companion concept designed to organize trip discovery.'},w6g:{ar:'تطبيق سفر',en:'Travel App'},w7:{ar:'نموذج متجر منتجات احترافي مع كتالوج مرتب وتجربة شراء سلسة.',en:'A professional product-store concept with an organized catalog and smooth buying flow.'},w7g:{ar:'متجر منتجات',en:'Product Store'},w8:{ar:'نموذج علامة رقمية مرنة يجمع بين البساطة والحضور المميز.',en:'A flexible digital-brand concept balancing simplicity with a distinctive presence.'},w8g:{ar:'علامة رقمية',en:'Digital Brand'},w9:{ar:'تجربة بث وتواصل اجتماعي بواجهة غنية بالتفاصيل والتفاعل.',en:'A streaming and social-communication concept with a detailed interactive interface.'},w9g:{ar:'منصة اجتماعية',en:'Social Platform'},w10:{ar:'نموذج متجر مستوحى من تجربة المقاهي والعلامات الاستهلاكية العالمية.',en:'A store concept inspired by global café and consumer-brand experiences.'},w10g:{ar:'تجربة متجر',en:'Store Experience'},go:{ar:'لماذا نحن',en:'Why Us'},gt:{ar:'ضمانات مكتوبة، لا وعود كلامية',en:'Written Guarantees, Not Verbal Promises'},
-g1t:{ar:'تعديلات حتى الرضا التام',en:'Revisions Until Fully Satisfied'},g1d:{ar:'لا نسلّم المشروع إلا وأنت راضٍ عنه 100%.',en:'We don\'t deliver until you are 100% happy.'},
-g2t:{ar:'سرية تامة',en:'Full Confidentiality'},g2d:{ar:'فكرتك وبياناتك وعملاؤك ملكك وحدك.',en:'Your idea, data and customers remain yours alone.'},
-g3t:{ar:'دعم بعد التسليم',en:'Post-Delivery Support'},g3d:{ar:'فترة دعم مجانية ثم باقات صيانة اختيارية.',en:'Free support period, then optional maintenance plans.'},
-ot:{ar:'عرض الإطلاق: لأول 3 عملاء فقط',en:'Launch Offer: First 3 Clients Only'},os:{ar:'نبني علاقات طويلة الأمد — احجز مكانك قبل انتهاء العرض.',en:'We build long-term relationships — claim your spot now.'},oc:{ar:'احجز العرض على واتساب',en:'Claim Offer on WhatsApp'},
-ft:{ar:'أسئلة شائعة',en:'Frequently Asked Questions'},
-f1q:{ar:'كم يستغرق تنفيذ مشروعي؟',en:'How long will my project take?'},f1a:{ar:'حسب النطاق: الموقع 3–7 أيام، المتجر 1–3 أسابيع، التطبيق 2–6 أسابيع. المدة تُكتب وتُلتزم في عرض السعر.',en:'By scope: websites 3–7 days, stores 1–3 weeks, apps 2–6 weeks. The deadline is written and committed in the quote.'},
-f2q:{ar:'كيف تتم الدفعات؟',en:'How do payments work?'},f2a:{ar:'دفعة عند البدء ودفعة عند التسليم، عبر الحساب البنكي للشركة أو PayPal أو البطاقة.',en:'A deposit to start and the rest on delivery — via company bank account, PayPal or card.'},
-f3q:{ar:'هل أدفع تكلفة استضافة أو دومين؟',en:'Do I pay for hosting or a domain?'},f3a:{ar:'نطلق مشروعك أولاً على استضافة مجانية سريعة، وتربط دومين باسمك متى شئت لاحقاً.',en:'We launch on fast free hosting first; connect your own domain whenever you like.'},
-f4q:{ar:'أين يُنشر مشروعي ومن يملكه؟',en:'Where is my project published, and who owns it?'},f4a:{ar:'يُنشر باسمك وعلى حساباتك، وتسلم كل الشيفرات والتصاميم — الملكية لك بالكامل.',en:'Published under your name and accounts; you receive all code & designs — full ownership is yours.'},
-co:{ar:'تواصل معنا',en:'Contact'},ct:{ar:'لنبنِ مشروعك القادم',en:'Let\'s Build Your Next Project'},cs:{ar:'أرسل فكرتك الآن وستصلك دراسة أولية وعرض سعر واضح خلال 48 ساعة — بدون أي التزام.',en:'Send your idea now and receive an initial study and a clear quote within 48 hours — no commitment.'},
-fn:{ar:'اسمك الكريم',en:'Your name'},fm:{ar:'حدّثنا عن فكرتك أو مشروعك...',en:'Tell us about your idea or project...'},fs:{ar:'إرسال الطلب عبر واتساب',en:'Send Request via WhatsApp'},
-o1:{ar:'موقع إلكتروني',en:'Website'},o2:{ar:'تطبيق موبايل',en:'Mobile App'},o3:{ar:'متجر إلكتروني',en:'E-Commerce Store'},o4:{ar:'نظام إدارة / لوحة تحكم',en:'Business System / Dashboard'},o5:{ar:'خدمة أخرى',en:'Other'},
-fr1:{ar:'وكالة رقمية مستقلة نصمم ونطور حلولاً عالمية: مواقع، تطبيقات، متاجر وأنظمة إدارة — بجودة عالية والتزام كامل.',en:'An independent digital agency crafting global solutions: websites, apps, stores & business systems — high quality, full commitment.'},
-fr2:{ar:'روابط سريعة',en:'Quick Links'},fr3:{ar:'خدماتنا',en:'Services'},fr4:{ar:'جميع الحقوق محفوظة',en:'All rights reserved'}
-};
-let cur='ar';
-try{cur=localStorage.getItem('vx_lang')||'ar';}catch{}
-function setLang(l){cur=l;try{localStorage.setItem('vx_lang',l);}catch{}
- const r=document.getElementById('root');r.lang=l;r.dir=l==='ar'?'rtl':'ltr';
- const title=l==='ar'?'VEXORA — حلول رقمية لعصر أذكى':'VEXORA — Digital Solutions for a Smarter Tomorrow';
- const description=l==='ar'?'وكالة VEXORA الرقمية: مواقع وتطبيقات ومتاجر وأنظمة مخصصة مع نماذج تجريبية قابلة للعرض.':'VEXORA digital agency: websites, apps, e-commerce and custom systems with demo projects you can explore.';
- document.title=title;
- document.querySelector('meta[name="description"]')?.setAttribute('content',description);
- document.querySelector('meta[property="og:title"]')?.setAttribute('content',title);
- document.querySelector('meta[property="og:description"]')?.setAttribute('content',description);
- document.getElementById('langBtn').textContent=l==='ar'?'EN':'عربي';
- document.querySelectorAll('[data-t]').forEach(e=>{if(T[e.dataset.t])e.textContent=T[e.dataset.t][l];});
- document.querySelectorAll('[data-tp]').forEach(e=>{if(T[e.dataset.tp])e.placeholder=T[e.dataset.tp][l];});
- fixWa();}
-const waLink=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
-function fixWa(){const m=cur==='ar'?'مرحباً VEXORA، أريد مناقشة مشروع جديد.':'Hello VEXORA, I would like to discuss a new project.';
- ['waTop','waOffer','waFloat','waBig'].forEach(id=>{const e=document.getElementById(id);if(e)e.href=waLink(m);});}
-function sendWa(e){e.preventDefault();
- const n=document.getElementById('cName').value,s=document.getElementById('cServ').value,m=document.getElementById('cMsg').value;
- const t=cur==='ar'?`مرحباً VEXORA\nالاسم: ${n}\nالخدمة المطلوبة: ${s}\nالتفاصيل: ${m}`:`Hello VEXORA\nName: ${n}\nService: ${s}\nDetails: ${m}`;
- e.target.reset();window.open(waLink(t),'_blank','noopener,noreferrer');}
-document.getElementById('mq').innerHTML+=document.getElementById('mq').innerHTML;
-function toggleMenu(button){const menu=document.getElementById('mnav');const open=!menu.classList.contains('open');menu.classList.toggle('open',open);button.setAttribute('aria-expanded',String(open));}
-function closeMenu(){const menu=document.getElementById('mnav');const button=document.querySelector('.burger');menu.classList.remove('open');if(button)button.setAttribute('aria-expanded','false');}
-if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));}else{document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));}
-setLang(cur);
-</script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>
